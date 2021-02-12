@@ -5,34 +5,28 @@ body
 
 #header
 {
-    background-color: aqua;
-    height: 60px;
-    color: white;
-    margin: 0;
-    font-size: 40px;
+    background-color: burlywood;
 }
 
-.navigation
+#navigation
 {
-    width: 90%;
-    
+    background-color: aqua;
+    color: white;
 }
 
 #main
 {
-    top: 60px;
-    left: 0px;
-    background-color: palegoldenrod;
-    margin: 0;
+    background-color: palegoldenrod;   /*To eliminate and put inside body. Delete #main in css*/
 }
 
 .section
 {
-    padding-left: 16px;
-    padding-top: 1px;
+
 }
 
-#footer
+
+
+#footerContent
 {
     left: 0px;
     bottom: 0px;
