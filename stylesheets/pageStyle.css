@@ -1,37 +1,86 @@
 body
 {
     margin: 0;
+    font-family: sans-serif;
 }
+
+/*--------------------------HEADER-----------------*/
 
 #header
 {
     background-color: burlywood;
 }
 
+#headerContent
+{
+    padding: 16px;
+}
+
+/*---------------------------NAVIGATION------------------*/
+
 #navigation
 {
     background-color: aqua;
-    color: white;
 }
+
+#navigationContent
+{
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navigationContent a
+{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;   /*Remove underline from link*/
+    font-size: 16px;
+}
+
+#navigationContent a#active   /*Properties of the active element (see HTML code)*/
+{
+    background-color: #ff9900;
+    color: #f2f2f2;
+}
+
+#navigationContent a:hover   /*Element pointed by the mouse*/
+{
+    background-color: #ddd;
+    color: #000;
+}
+
+/*--------------------------MAIN--------------------------*/
 
 #main
 {
     background-color: palegoldenrod;   /*To eliminate and put inside body. Delete #main in css*/
 }
 
-.section
+#mainContent
 {
-
+    padding: 16px;
+    background-color: palegoldenrod;
 }
 
+/*-----------------------------ASIDE------------------------TO DO*/
 
+#aside
+{
+    width: 30%;
+    padding: 16px;
+    margin-right: 16px;
+    float: left;
+    background-color: aqua;
+}
+
+/*-----------------------------FOOTER-------------------------*/
 
 #footerContent
 {
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    background-color: #505050;
-    color: white;
+    background-color: #ddd;
+    color: #000;
     text-align: center;
+    padding: 10px;
 }
