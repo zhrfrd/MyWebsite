@@ -51,29 +51,46 @@ body
     color: #000;
 }
 
+/*---------------------SIDE NAVIGATION----------------------*/
+
+#sideNavigationContent
+{
+    background-color: #333;
+}
+
+#sideNavigationContent a
+{
+
+    color: #f2f2f2;
+    display: block;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#sideNavigationContent a#active
+{
+    background-color: #ff9900;
+    color: #f2f2f2;
+}
+
+#sideNavigationContent a:hover
+{
+    background-color: #ddd;
+    color: #000;
+}
+
 /*--------------------------MAIN--------------------------*/
 
 #main
 {
+    max-width: 60%;
+    margin: auto;   /*Center horizontally the container*/
     background-color: palegoldenrod;   /*To eliminate and put inside body. Delete #main in css*/
-}
-
-#mainContent
-{
     padding: 16px;
-    background-color: palegoldenrod;
 }
 
 /*-----------------------------ASIDE------------------------TO DO*/
-
-#aside
-{
-    width: 30%;
-    padding: 16px;
-    margin-right: 16px;
-    float: left;
-    background-color: aqua;
-}
 
 /*-----------------------------FOOTER-------------------------*/
 
@@ -82,5 +99,5 @@ body
     background-color: #ddd;
     color: #000;
     text-align: center;
-    padding: 10px;
+    padding: 16px;
 }

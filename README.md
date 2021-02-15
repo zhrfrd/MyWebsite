@@ -1,4 +1,4 @@
-# Title of the README.md file
+# README.md file
 
 Website information
 
