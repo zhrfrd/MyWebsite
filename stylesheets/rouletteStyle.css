@@ -1,0 +1,18 @@
+table, th, td
+{
+    margin: auto;   /*Center horizontally*/
+    border-collapse: collapse;
+    padding: 16px;
+    max-width: 10%;
+}
+
+input
+{
+    display: block;
+    margin: auto;
+}
+
+.cell
+{
+    border: 1px solid;
+}

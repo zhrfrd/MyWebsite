@@ -2,6 +2,7 @@ body
 {
     margin: 0;
     font-family: sans-serif;
+    background-color: rosybrown;
 }
 
 /*--------------------------HEADER-----------------*/
@@ -86,7 +87,7 @@ body
     min-height: 100vh;
     max-width: 60%;
     margin: auto;   /*Center horizontally the container*/
-    background-color: palegoldenrod;   /*To eliminate and put inside body. Delete #main in css*/
+    background-color: #fff;   /*To eliminate and put inside body. Delete #main in css*/
     padding: 16px;
 }
 
