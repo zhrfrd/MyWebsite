@@ -7,7 +7,7 @@
     <title>Roulette</title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
     <link rel="stylesheet" href="../stylesheets/rouletteStyle.css">
-    
+    <script type="text/javascript" src="../scripts/roulette.js"></script>  
 </head>
 <body>
     <?php include '../assets/header.php' ?>   <!-- Header of the page -->
@@ -228,20 +228,20 @@
                     </td>
                 </tr>
             </table>
+            <input type="button" id="start" value="START!" onclick="start()"><br />
+            <p id="totalMoney"></p>
         </section>
     </main>
     <?php include '../assets/footer.php' ?>   <!-- Footer of the page -->
 
     <!-- Javascript -->
     <script>
-
         changeNavActiveId();   //Change the id of the tab (inside the top navigation) relative the the actual page to "active" in order change the color through CSS
 
         function changeNavActiveId() 
         {
             document.getElementById("projects").id = "active";
         }
-//gdjdsfjsf
     </script>
 </body>
 </html>
