@@ -43,7 +43,7 @@ body
 #navigationContent a#active   /*Properties of the active element (see HTML code)*/
 {
     background-color: #ff9900;
-    color: #f2f2f2;
+    color: #333;
 }
 
 #navigationContent a:hover   /*Element pointed by the mouse*/
