@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Algorithms</title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
 </head>
 <body>
@@ -12,10 +12,12 @@
     <?php include 'assets/navigation.php' ?>   <!-- Top navigtion menu -->
     <main id="main">
         <section class="section">
-            <div id="myProjects">
-                <h1>My projects</h1>
+            <div id="myAlgorithms">
+                <h1>Algorithms</h1>
                 <ul>
-                    <li><a href="projects/roulette.php">Roulette</a></li>
+                    <li><a href="algorithms/linearSearch.php">Linear search</a></li>
+                    <li><a href="algorithms/binarySearch.php">Binary search</a></li>
+                    <li><a href="algorithms/">Shuffling the elements of an array</a></li>
                 </ul>
             </div>
         </section>
@@ -29,7 +31,7 @@
 
         function changeNavActiveId() 
         {
-            document.getElementById("projects").id = "active";
+            document.getElementById("algorithms").id = "active";
         }
 
     </script>

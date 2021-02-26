@@ -2,14 +2,14 @@ body
 {
     margin: 0;
     font-family: sans-serif;
-    background-color: rosybrown;
+    background-color: #DCDCDC;
 }
 
 /*--------------------------HEADER-----------------*/
 
 #header
 {
-    background-color: burlywood;
+    background-color: #FFF;
 }
 
 #headerContent
@@ -48,7 +48,7 @@ body
 
 #navigationContent a:hover   /*Element pointed by the mouse*/
 {
-    background-color: #ddd;
+    background-color: #DCDCDC;
     color: #000;
 }
 
@@ -88,7 +88,7 @@ body
     max-width: 60%;
     margin: auto;   /*Center horizontally the container*/
     background-color: #fff;   /*To eliminate and put inside body. Delete #main in css*/
-    padding: 16px;
+    padding: 24px;
 }
 
 /*-----------------------------ASIDE------------------------TO DO*/
@@ -99,7 +99,7 @@ body
 {
     bottom: 0;
     max-width: 100%;
-    background-color: #ddd;
+    background-color: #DCDCDC;
     color: #000;
     text-align: center;
     padding: 16px;
