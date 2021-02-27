@@ -24,26 +24,23 @@ function binarySearch()
     var start = 0;
     var end = arrayLength;
     var key = parseInt(document.getElementById("txtKey").value);
+    var mid = (end + start) / 2;
 
     while (res == 0)
     {
-        if (key > (Math.floor(end / 2)))
+        if (key < mid)   //If the key is minor than the element in the middle of the array set the end of the array in the middle
+            end = mid;
+
+        else if (key > mid)   //If the key is major than the element in the middle of the array set the start of the array in the middle
+            start = mid;
+            
+        else if (key == mid)   //If the key is in the middle displa the position
         {
-            start += (Math.floor(end / 2) - Math.floor(start / 2));
+            position = mid + 1;
+            res = 1;
         }
 
-        else if (key < Math.floor(end / 2))
-        {
-            Math.floor(end /= 2);
-        }
-
-        else if (key == myArray[start])
-        {
-            res ++;
-            position = start;
-        }
-
-        alert(Math.floor(start) + " " + Math.floor(end));
+        mid = Math.floor((end + start) / 2);
     }
 
     if (res > 0)
