@@ -42,7 +42,7 @@ function binarySearch()
             res ++;
             position = start;
         }
-
+   
         alert (start);
     }
 
