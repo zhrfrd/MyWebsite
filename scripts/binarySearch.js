@@ -22,28 +22,25 @@ function populate()
 function binarySearch()
 {
     var start = 0;
-    var end = myArray[arrayLength];
+    var end = arrayLength;
     var key = parseInt(document.getElementById("txtKey").value);
+    var mid = (end + start) / 2;
 
-    while (start < arrayLength)
+    while (res == 0)
     {
-        if (key > (end / 2))
+        if (key < mid)   //If the key is minor than the element in the middle of the array set the end of the array in the middle
+            end = mid;
+
+        else if (key > mid)   //If the key is major than the element in the middle of the array set the start of the array in the middle
+            start = mid;
+            
+        else if (key == mid)   //If the key is in the middle display the position
         {
-            start = end / 2;
+            position = mid + 1;
+            res = 1;
         }
 
-        else if (key < (end / 2))
-        {
-            end /= 2;
-        }
-
-        else if (key == myArray[start])
-        {
-            res ++;
-            position = start;
-        }
-   
-        alert (start);
+        mid = Math.floor((end + start) / 2);
     }
 
     if (res > 0)
