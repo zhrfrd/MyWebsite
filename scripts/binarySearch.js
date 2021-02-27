@@ -22,19 +22,19 @@ function populate()
 function binarySearch()
 {
     var start = 0;
-    var end = myArray[arrayLength];
+    var end = arrayLength;
     var key = parseInt(document.getElementById("txtKey").value);
 
-    while (start < arrayLength)
+    while (res == 0)
     {
-        if (key > (end / 2))
+        if (key > (Math.floor(end / 2)))
         {
-            start = end / 2;
+            start += (Math.floor(end / 2) - Math.floor(start / 2));
         }
 
-        else if (key < (end / 2))
+        else if (key < Math.floor(end / 2))
         {
-            end /= 2;
+            Math.floor(end /= 2);
         }
 
         else if (key == myArray[start])
@@ -43,7 +43,7 @@ function binarySearch()
             position = start;
         }
 
-        alert (start);
+        alert(Math.floor(start) + " " + Math.floor(end));
     }
 
     if (res > 0)
