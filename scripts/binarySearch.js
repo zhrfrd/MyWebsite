@@ -34,7 +34,7 @@ function binarySearch()
         else if (key > mid)   //If the key is major than the element in the middle of the array set the start of the array in the middle
             start = mid;
             
-        else if (key == mid)   //If the key is in the middle displa the position
+        else if (key == mid)   //If the key is in the middle display the position
         {
             position = mid + 1;
             res = 1;
