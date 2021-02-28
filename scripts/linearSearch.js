@@ -17,7 +17,6 @@ function populate()
 
     myArray = myArray.sort(() => Math.random() - 0.5)   //Shuffle array elements
     document.getElementById("txtResult").value = myArray;   //Output
-
     document.getElementById("bttSearch").disabled = false;
 }
 

@@ -14,10 +14,15 @@
         <section class="section">
             <div id="myAlgorithms">
                 <h1>Algorithms</h1>
+                <p>This section contains a series of algorithms, written in Javascript.</p>
+                <h2>Search algorithms</h2>
                 <ul>
                     <li><a href="algorithms/linearSearch.php">Linear search</a></li>
                     <li><a href="algorithms/binarySearch.php">Binary search</a></li>
-                    <li><a href="algorithms/">Shuffling the elements of an array</a></li>
+                </ul>
+                <h2>Sorting algorithms</h2>
+                <ul>
+                    <li><a href="algorithms/selectionSort.php">Selection sort</a></li>
                 </ul>
             </div>
         </section>

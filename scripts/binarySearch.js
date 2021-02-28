@@ -12,7 +12,7 @@ function populate()
     //Populate array with ordered numbers
     for (var c = 0; c < arrayLength; c++)
     {
-        myArray[c] = c;
+        myArray [c] = c;
     }
 
     document.getElementById("txtResult").value = myArray;   //Output

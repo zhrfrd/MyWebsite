@@ -14,6 +14,7 @@
         <section class="section">
             <div id="myProjects">
                 <h1>My projects</h1>
+                <p>This section contains a list of projects made by me</p>
                 <ul>
                     <li><a href="projects/roulette.php">Roulette</a></li>
                 </ul>
