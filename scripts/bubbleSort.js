@@ -13,24 +13,25 @@ function populate()
 
     myArray = myArray.sort(() => Math.random() - 0.5)   //Shuffle array elements
     document.getElementById("txtUnsortedArray").value = myArray;   //Output
-    document.getElementById("bttSelectionSort").disabled = false;
+    document.getElementById("bttBubbleSort").disabled = false;
 }
 
-function selectionSort()
+function bubbleSort()
 {
     var temp;
     
-    for (count1 = 0; count1 < (arrayLength); count1 ++)
+    for (count1 = arrayLength; count1 > 0; count1 --)
     {
-        for (count2 = count1; count2 < (arrayLength); count2 ++)
+        for (count2 = 0; count2 < count1; count2 ++)
         {
-            if (myArray[count2] < myArray[count1])
+            if (myArray[count2] > myArray[count2 + 1])
             {
-                //Swap the two value of the array
                 temp = myArray[count2];
-                myArray[count2] = myArray[count1];
-                myArray[count1] = temp;
+                myArray[count2] = myArray[count2 + 1];
+                myArray[count2 + 1] = temp;
             }
+
+            //alert(count2);
         }
     }
 

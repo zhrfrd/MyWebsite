@@ -23,6 +23,8 @@
                 <h2>Sorting algorithms</h2>
                 <ul>
                     <li><a href="algorithms/selectionSort.php">Selection sort</a></li>
+                    <li><a href="algorithms/bubbleSort.php">Bubble sort</a></li>
+                    <li><a href="algorithms/insertionSort.php">Insertion sort </a></li>
                 </ul>
             </div>
         </section>
