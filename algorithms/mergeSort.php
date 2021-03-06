@@ -28,7 +28,7 @@
                     <br>
                     <li>
                         <p>Click the button below to sort the array:</p>
-                        <button id="bttMergeSort" disabled="true" onclick="mergeSort()">Merge sort</button>
+                        <button id="bttMergeSort" disabled="true" onclick="calculateMergeSort()">Merge sort</button>
                     </li>
                     <br>
                     <label for="txtSortedArray">Sorted array</label><br>

@@ -6,6 +6,7 @@
                 <a id="projects" href="../projects.php">Projects</a>
                 <a id="algorithms" href="../algorithms.php">Algorithms</a>
                 <a id="exercises" href="../exercises.php">Exercises</a>
+                <a id="contactMe" href="../contactMe.php">Contact me</a>
             </div>
         </nav>
     ';
