@@ -18,8 +18,8 @@
                 <ol>
                     <li>
                         <p>Insert the number of elements to populate the array: </p>
-                        <label for="txtLength">Array length: </label>
-                        <input type="text" id="txtLength">
+                        <label for="txtLength">Array size: </label>
+                        <input type="text" size="5" id="txtLength">
                         <button id="bttPopulate" onclick="populate()">Populate array</button>
                     </li>
                     <br>
@@ -31,7 +31,8 @@
                         <button id="bttBubbleSort" disabled="true" onclick="bubbleSort()">Bubble sort</button>
                     </li>
                     <br>
-                    <label for="txtSortedArray">Sorted array</label><br>
+                    <label for="txtSortedArray">Sorted array: </label>
+                    <br>
                     <textarea id="txtSortedArray" rows="20" cols="100"></textarea>
                 </ol>
             </div>

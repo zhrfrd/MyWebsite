@@ -15,18 +15,25 @@
         <section class="section">
             <div id="linearSearch">
                 <h1>Linear search</h1>
+                <p>The <strong>linear search</strong> is the simplest search algorithm to implement. However it's not the most efficient. The search process consists on the <em>sequential</em> comparison of each element of the array, with the <em>key</em> element that needs to be found until, this last, is found.</p>
+                <p>The inefficency of this <em>search algorithm</em> increases with the increasing of the size of the array. If the <em>key</em> element is in the last position, in fact, the search will involve all the elements and, for big arrays, the process will become tedious.</p>
                 <ol>
                     <li>
                         <p>Insert the number of elements to populate the array: </p>
-                        <input type="text" id="txtLength">
+                        <label for="txtLength">Array size: </label>
+                        <input type="text" size="5" id="txtLength">
                         <button id="bttPopulate" onclick="populate()">Populate array</button>
                     </li>
                     <li>
                         <p>Insert the number to search:</p>
-                        <input type="text" id="txtKey">
+                        <label for="txtKey">Key: </label>
+                        <input type="text" size="5" id="txtKey">
                         <button id="bttSearch" disabled="true" onclick="linearSearch()">Linear search</button>
+                        <button id="bttSearchRecursive" disabled="true" onclick="calculateLinearSearchRecursive()">Linear search recursive</button>
                     </li>
                 </ol>
+                <br>
+                <label for="txtResult">Usorted array: </label>
                 <br>
                 <textarea id="txtResult" rows="20" cols="100"></textarea>
             </div>

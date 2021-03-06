@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact me</title>
+    <title>Exercises</title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
 </head>
 <body>
@@ -12,7 +12,13 @@
     <?php include 'assets/navigation.php' ?>   <!-- Top navigtion menu -->
     <main id="main">
         <section class="section">
-            <p>Contact me</p>
+            <div id="myExercises">
+                <h1>Exercises</h1>
+                <p>In this section I post all the exercises that I do.</p>
+                <ol>
+                    <li><a href="../exercises/palindrome.php">Find if a string is palindrome</a>.</li>
+                </ol>
+            </div>
         </section>
     </main>
     <?php include 'assets/footer.php' ?>   <!-- Footer of the page -->
@@ -24,7 +30,7 @@
 
         function changeNavActiveId() 
         {
-            document.getElementById("contactMe").id = "active";
+            document.getElementById("exercises").id = "active";
         }
 
     </script>

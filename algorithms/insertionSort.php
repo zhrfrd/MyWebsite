@@ -19,7 +19,7 @@
                     <li>
                         <p>Insert the number of elements to populate the array: </p>
                         <label for="txtLength">Array length: </label>
-                        <input type="text" id="txtLength">
+                        <input type="text" size="5" id="txtLength">
                         <button id="bttPopulate" onclick="populate()">Populate array</button>
                     </li>
                     <br>

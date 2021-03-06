@@ -17,6 +17,7 @@ function populate()
 
     document.getElementById("txtResult").value = myArray;   //Output
     document.getElementById("bttSearch").disabled = false;
+    document.getElementById("bttSearchRecursive").disabled = false;
 }
 
 function binarySearch()

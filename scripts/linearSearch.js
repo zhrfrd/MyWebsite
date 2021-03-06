@@ -1,8 +1,10 @@
 var myArray = new Array();
 var arrayLength;
-var res = 0;
-var position;
+var res = -1;
+var resFactorial;
+var position = -1;
 var textSize;
+var key;
 
 //Generat array of different numbers
 function populate()
@@ -18,11 +20,13 @@ function populate()
     myArray = myArray.sort(() => Math.random() - 0.5)   //Shuffle array elements
     document.getElementById("txtResult").value = myArray;   //Output
     document.getElementById("bttSearch").disabled = false;
+    document.getElementById("bttSearchRecursive").disabled = false;
 }
 
 function linearSearch()
 {
-    var key = parseInt(document.getElementById("txtKey").value);
+    key = parseInt(document.getElementById("txtKey").value);
+    res = 0;
 
     for (var c = 0; c < arrayLength; c++)
     {
@@ -38,4 +42,38 @@ function linearSearch()
 
     else
         alert ("Key not present inside the array!");
+}
+
+function calculateLinearSearchRecursive()
+{
+    key = parseInt(document.getElementById("txtKey").value);
+    count = 0;
+
+    var recursivePosition = linearSearchRecursive(count);
+
+    if (recursivePosition != -1)
+        alert ("Key found in position: " + recursivePosition);
+
+    else
+        alert ("Key not present inside the array!");
+}
+
+function linearSearchRecursive(count)
+{
+    if(key == myArray[count])
+    {
+       res = count;
+       count == arrayLength + 1;
+    }
+
+    if ((key != myArray[count]) && (count < arrayLength))
+    {
+        count ++;
+        linearSearchRecursive(count);
+    }
+
+    if (count >= arrayLength)
+        res = -1;
+
+    return res;
 }
