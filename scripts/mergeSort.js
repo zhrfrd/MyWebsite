@@ -20,44 +20,89 @@ function populate()
 
 function calculateMergeSort()
 {
-    mergeSort (myArray);
+    myArray = mergeSort (myArray);
+    alert("sd")
+    document.getElementById("txtSortedArray").value = myArray;
 }
 
 function mergeSort(mArray)
 {
+    //alert(mArray);
     arrayLength = mArray.length;   //Update array length
-    
     //If the array is compsed by 1 element exit
-    if (arrayLength < 2)
-        return;
+    if (mArray.length <= 1)
+        return mArray;
 
-    var middle = parseInt(arrayLength / 2);   //Middle of the array
-    arrayLeft.length = middle;                  //Initialise the two subarrays sizes
-    arrayRight.length = arrayLength - middle;   //
+    var middle = Math.floor(mArray.length / 2);   //Middle of the array
+    var arrayLeft = new Array(middle);                    //Initialise the two subarrays sizes
+    var arrayRight = new Array(mArray.length - middle);   //
+    var countLeft = 0;
+    var countRight = 0;
 
-    //alert(middle + " " + arrayLeft.length + " " + arrayRight.length);
-
-    //Populate the array on the left side with the elements on the first half of the main array
-    for (var i = 0; i < middle - 1; i ++)
+    while (countLeft < arrayLeft.length)
     {
-        arrayLeft[i] = mArray[i];
+        arrayLeft[countLeft] = mArray[countLeft];
+        countLeft ++
     }
 
-    //Populate the array on the right side with the elements on the second half of the main array
-    for (var j = middle; j < arrayLength - 1; j ++)
+    while (countRight < arrayRight.length)
     {
-        arrayRight[j] = mArray[j];
+        arrayRight[countRight] = mArray[countRight];
+        countRight ++
     }
 
-    //alert("LEFT");
-    mergeSort(arrayLeft);   //Recursively create the subarrays on the left side
-    //alert("RIGHT");
-    mergeSort(arrayRight);   //Recursively create the subarrays on the right side
-    merge(arrayLeft, arrayRight, mArray);   //Merge the arrays
+    var arraySorted = new Array(mArray.length);
+
+    alert("LEFT " + arrayLeft.length + " " + arrayLeft);
+    arrayLeft = mergeSort(arrayLeft);   //Recursively create the subarrays on the left side
+    alert("RIGHT " + arrayRight.length + " " + arrayRight);
+    arrayRight = mergeSort(arrayRight);   //Recursively create the subarrays on the right side
+    arraySorted = merge(arrayLeft, arrayRight);   //Merge the arrays
+
+    return arraySorted;
 }
 
-function merge(arrayLeft, arrayRight, myArray)
+function merge(arrayLeft, arrayRight)
 {
+    var arraySorted = new Array(arrayLeft.length + arrayRight.length);
+    var leftCount = 0;
+    var rightCount = 0;
+    var sortedCount = 0;
+    alert (arrayLeft.length);
+
+    //Until the counter reach the end of both arrays (left and right)
+
+    while((leftCount < arrayLeft.length) && (rightCount < arrayRight.length))
+    {
+        if (arrayLeft[leftCount] < arrayRight[rightCount])
+        {
+            arraySorted[sortedCount] = arrayLeft[leftCount];
+            leftCount ++;
+            sortedCount ++;
+        }
+
+        else if (arrayRight[rightCount] < arrayLeft[leftCount])
+        {
+            arraySorted[sortedCount] = arrayRight[rightCount];
+            rightCount ++;
+            sortedCount ++;
+        }
+    }
+
+    while (leftCount < arrayLeft.length)
+    {
+        arraySorted[sortedCount] = arrayLeft[leftCount];
+        leftCount ++;
+        sortedCount ++;
+    }
+
+    while (rightCount < arrayRight.length)
+    {
+        arraySorted[sortedCount] = arrayRight[rightCount];
+        rightCount ++;
+        sortedCount ++;
+    }
+
+    return arraySorted;
     
-    //alert(arrayLeft.length + " " + arrayRight.length + " " + myArray.length + " " + "FIGAAAAA");
 }
