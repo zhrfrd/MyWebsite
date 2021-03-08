@@ -1,6 +1,4 @@
 var myArray = new Array();
-var arrayLeft = new Array();
-var arrayRight = new Array();
 var arrayLength;
 
 function populate()
@@ -21,59 +19,53 @@ function populate()
 function calculateMergeSort()
 {
     myArray = mergeSort (myArray);
-    alert("sd")
     document.getElementById("txtSortedArray").value = myArray;
 }
 
-function mergeSort(arr)
+function mergeSort(mainArray)
 {
-    if(arr.length <= 1) return arr;
-    // remember that we said merge sort uses divide and conquer
-        // algorithm pattern
+    //Case base (If the array size is 1 or minor)
+    if(mainArray.length <= 1)
+        return mainArray;
 
-    // it firsts know the half point of the array.
-    var halfPoint = Math.ceil(arr.length / 2);
+    let middle = Math.ceil(mainArray.length / 2);   //Find middle point of array (ceil: rounds the number up to the largest)
+    
+    let leftHalf = mainArray.slice(0, middle);   //Slice mainArray from the index 0 to middle and save it inside a new array called leftHalf
+    let rightHalf = mainArray.slice(middle, mainArray.length);   //Slice mainArray from the index middle to mainArray.length and save it inside a new array called rightHalf
 
-    // and then splice the array from the beginning up to the half point.
-    // but for the fact that merge sort needs the array to be of one element, it will keep splicing that half till it fulfills the condition of having one element array.
+    leftHalf = mergeSort(leftHalf);   //Recursivelly call the mergeSort() function and pass the left vector as parameter until the array size is 1
+    rightHalf = mergeSort(rightHalf);   //Recursivelly call the mergeSort() function and pass the right vector as parameter until the array size is 1
 
-    var firstHalf = mergeSort(arr.splice(0, halfPoint));
-
-    // second array from the half point up to the end of the array.
-    var secondHalf = mergeSort(arr.splice(-halfPoint));
-
-    // merge the array back and return the result.
-    // note that we are using the helper function we created above.
-    return merge(firstHalf, secondHalf);
+    return merge(leftHalf, rightHalf);   //Call the merge() function to merge the arrays
 }
 
+//Merge in order two arrays
 function merge(arrayLeft, arrayRight)
 {
-    var arraySorted = new Array(arrayLeft.length + arrayRight.length);
-    var leftCount = 0;
-    var rightCount = 0;
-    var sortedCount = 0;
-    alert (arrayLeft.length);
+    let arraySorted = new Array(arrayLeft.length + arrayRight.length);   //Create array with the size of the sum of the leftArray and rightArray
+    let leftCount = rightCount = sortedCount = 0;   //Counters
 
     //Until the counter reach the end of both arrays (left and right)
-
     while((leftCount < arrayLeft.length) && (rightCount < arrayRight.length))
     {
+        //If the element on the left array is smaller than the elemet on the right array increase the left counter
         if (arrayLeft[leftCount] < arrayRight[rightCount])
         {
             arraySorted[sortedCount] = arrayLeft[leftCount];
             leftCount ++;
-            sortedCount ++;
         }
 
+        //If the element on the right array is smaller than the elemet on the left array increase the right counter
         else if (arrayRight[rightCount] < arrayLeft[leftCount])
         {
             arraySorted[sortedCount] = arrayRight[rightCount];
             rightCount ++;
-            sortedCount ++;
         }
+
+        sortedCount ++;   //For each cycle, increase the counter for the arrySorted
     }
 
+    //Similar cycle to the previous one but only if the right array has been completely checked
     while (leftCount < arrayLeft.length)
     {
         arraySorted[sortedCount] = arrayLeft[leftCount];
@@ -81,6 +73,7 @@ function merge(arrayLeft, arrayRight)
         sortedCount ++;
     }
 
+    //Similar cycle to the previous one but only if the left array has been completely checked
     while (rightCount < arrayRight.length)
     {
         arraySorted[sortedCount] = arrayRight[rightCount];
@@ -89,5 +82,4 @@ function merge(arrayLeft, arrayRight)
     }
 
     return arraySorted;
-    
 }

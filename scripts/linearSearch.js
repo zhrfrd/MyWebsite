@@ -47,9 +47,9 @@ function linearSearch()
 function calculateLinearSearchRecursive()
 {
     key = parseInt(document.getElementById("txtKey").value);
-    count = 0;
+    let count = 0;
 
-    var recursivePosition = linearSearchRecursive(count);
+    let recursivePosition = linearSearchRecursive(count);
 
     if (recursivePosition != -1)
         alert ("Key found in position: " + recursivePosition);
@@ -69,7 +69,7 @@ function linearSearchRecursive(count)
     if ((key != myArray[count]) && (count < arrayLength))
     {
         count ++;
-        linearSearchRecursive(count);
+        res = linearSearchRecursive(count);
     }
 
     if (count >= arrayLength)

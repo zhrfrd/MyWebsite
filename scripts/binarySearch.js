@@ -1,9 +1,6 @@
 var myArray = new Array();
 var arrayLength;
-var res = 0;
 var key;
-var position;
-var textSize;
 
 //Generat array of different numbers
 function populate()
@@ -23,10 +20,10 @@ function populate()
 
 function binarySearch()
 {
-    var start = 0;
-    var end = arrayLength;
+    let start = position = res = 0;
+    let end = arrayLength;
     key = parseInt(document.getElementById("txtKey").value);
-    var mid = (end + start) / 2;
+    let mid = (end + start) / 2;
 
     while (res == 0)
     {
@@ -54,15 +51,15 @@ function binarySearch()
 
 function calculateBinarySearchRecursive()
 {
-    var start = 0;
-    var end = arrayLength;
+    let start = 0;
+    let end = arrayLength;
 
     binarySearchRecursive(start, end);
 }
 
 function binarySearchRecursive(start, end)
 {
-    var mid = Math.floor((start + end) / 2);
+    let mid = Math.floor((start + end) / 2);
 
     if (myArray.length == 1)
         return myArray[0];

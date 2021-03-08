@@ -25,7 +25,7 @@
                     <li><a href="algorithms/selectionSort.php">Selection sort</a></li>
                     <li><a href="algorithms/bubbleSort.php">Bubble sort</a></li>
                     <li><a href="algorithms/insertionSort.php">Insertion sort</a></li>
-                    <li><a href="algorithms/mergeSort.php">Merge sort</a><strong> Not working!</strong></li>
+                    <li><a href="algorithms/mergeSort.php">Merge sort</a></li>
                 </ul>
                 <h2>Mathematics</h2>
                 <ul>
