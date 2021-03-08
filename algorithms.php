@@ -17,6 +17,7 @@
                 <p>This section contains a series of algorithms, written in Javascript.</p>
                 <h2>Search algorithms</h2>
                 <ul>
+                    <li><a href="algorithms/sortingAlgorithms.php">Sorting algorithms</a></li>
                     <li><a href="algorithms/linearSearch.php">Linear search</a></li>
                     <li><a href="algorithms/binarySearch.php">Binary search</a></li>
                 </ul>

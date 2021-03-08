@@ -1,6 +1,7 @@
 var myArray = new Array();
 var arrayLength;
 var key;
+var res = -1;
 
 //Generat array of different numbers
 function populate()
@@ -53,29 +54,35 @@ function calculateBinarySearchRecursive()
 {
     let start = 0;
     let end = arrayLength;
+    key = parseInt(document.getElementById("txtKey").value);
 
-    binarySearchRecursive(start, end);
+    let position = binarySearchRecursive(start, end);
+    
+    if (position != -1)
+        alert ("Key found in position: " + position);
+
+    else
+        alert ("Key not present inside the array");
 }
 
 function binarySearchRecursive(start, end)
 {
-    let mid = Math.floor((start + end) / 2);
+    let middle = Math.ceil ((end + start) / 2);   //Update middle point recursivelly 
 
-    if (myArray.length == 1)
-        return myArray[0];
+    if (key == myArray[middle])
+        res = middle;
 
-    else if (key < mid)
+    else if (key < myArray[middle])   //If key smaller than middle element set middle element as the end of the array
     {
-        end = mid;
+        end = middle;
+        res = binarySearchRecursive(start, end);   
     }
 
-    else if (key > mid)
+    else if (key > myArray[middle])   //If key bigger than middle element set middle element as the start of the array
     {
-        start = mid;
+        start = middle;
+        res = binarySearchRecursive(start, end);
     }
 
-    else if (key == mid)
-        return myArray[mid];
-
-    
+    return res;
 }
