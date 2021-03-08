@@ -34,6 +34,7 @@
                         <label for="txtKey">Key: </label>
                         <input type="text" size="5" id="txtKey">
                         <button id="bttSearch" disabled="true" onclick="binarySearch()">Binary search</button>
+                        <button id="bttSearchRecursive" disabled="true" onclick="calculateBinarySearchRecursive()">Binary search recursive</button>
                     </li>
                 </ol>
                 <br>

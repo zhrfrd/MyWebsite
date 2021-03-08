@@ -25,41 +25,26 @@ function calculateMergeSort()
     document.getElementById("txtSortedArray").value = myArray;
 }
 
-function mergeSort(mArray)
+function mergeSort(arr)
 {
-    //alert(mArray);
-    arrayLength = mArray.length;   //Update array length
-    //If the array is compsed by 1 element exit
-    if (mArray.length <= 1)
-        return mArray;
+    if(arr.length <= 1) return arr;
+    // remember that we said merge sort uses divide and conquer
+        // algorithm pattern
 
-    var middle = Math.floor(mArray.length / 2);   //Middle of the array
-    var arrayLeft = new Array(middle);                    //Initialise the two subarrays sizes
-    var arrayRight = new Array(mArray.length - middle);   //
-    var countLeft = 0;
-    var countRight = 0;
+    // it firsts know the half point of the array.
+    var halfPoint = Math.ceil(arr.length / 2);
 
-    while (countLeft < arrayLeft.length)
-    {
-        arrayLeft[countLeft] = mArray[countLeft];
-        countLeft ++
-    }
+    // and then splice the array from the beginning up to the half point.
+    // but for the fact that merge sort needs the array to be of one element, it will keep splicing that half till it fulfills the condition of having one element array.
 
-    while (countRight < arrayRight.length)
-    {
-        arrayRight[countRight] = mArray[countRight];
-        countRight ++
-    }
+    var firstHalf = mergeSort(arr.splice(0, halfPoint));
 
-    var arraySorted = new Array(mArray.length);
+    // second array from the half point up to the end of the array.
+    var secondHalf = mergeSort(arr.splice(-halfPoint));
 
-    alert("LEFT " + arrayLeft.length + " " + arrayLeft);
-    arrayLeft = mergeSort(arrayLeft);   //Recursively create the subarrays on the left side
-    alert("RIGHT " + arrayRight.length + " " + arrayRight);
-    arrayRight = mergeSort(arrayRight);   //Recursively create the subarrays on the right side
-    arraySorted = merge(arrayLeft, arrayRight);   //Merge the arrays
-
-    return arraySorted;
+    // merge the array back and return the result.
+    // note that we are using the helper function we created above.
+    return merge(firstHalf, secondHalf);
 }
 
 function merge(arrayLeft, arrayRight)

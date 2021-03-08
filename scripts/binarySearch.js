@@ -1,6 +1,7 @@
 var myArray = new Array();
 var arrayLength;
 var res = 0;
+var key;
 var position;
 var textSize;
 
@@ -24,7 +25,7 @@ function binarySearch()
 {
     var start = 0;
     var end = arrayLength;
-    var key = parseInt(document.getElementById("txtKey").value);
+    key = parseInt(document.getElementById("txtKey").value);
     var mid = (end + start) / 2;
 
     while (res == 0)
@@ -49,4 +50,35 @@ function binarySearch()
 
     else
         alert ("Key not present inside the array!");
+}
+
+function calculateBinarySearchRecursive()
+{
+    var start = 0;
+    var end = arrayLength;
+
+    binarySearchRecursive(start, end);
+}
+
+function binarySearchRecursive(start, end)
+{
+    var mid = Math.floor((start + end) / 2);
+
+    if (myArray.length == 1)
+        return myArray[0];
+
+    else if (key < mid)
+    {
+        end = mid;
+    }
+
+    else if (key > mid)
+    {
+        start = mid;
+    }
+
+    else if (key == mid)
+        return myArray[mid];
+
+    
 }
