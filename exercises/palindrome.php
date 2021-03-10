@@ -14,7 +14,7 @@
     <main id="main">
         <section class="section">
             <div id="palindrome">
-                <h1>Check if a string is palindrome</h1>
+                <h1>Exercise 1</h1>
                 <p>Write a function to check if a string is palindrome</p>
                 <label for="txtString">Insert a string: </label>
                 <input type="text" id="txtString">

@@ -29,6 +29,7 @@
                     <li>
                         <p>Click the button below to sort the array:</p>
                         <button id="bttSelectionSort" disabled="true" onclick="selectionSort()">Selection sort</button>
+                        <button id="bttSelectionSortRecursive" disabled="true" onclick="calculateSelectionSortRecursive()">Selection sort recursive</button>
                     </li>
                     <br>
                     <label for="txtSortedArray">Sorted array</label><br>

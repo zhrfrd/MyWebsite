@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubble sort</title>
+    <title>Quick sort</title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
-    <script type="text/javascript" src="../scripts/bubbleSort.js"></script> 
+    <script type="text/javascript" src="../scripts/quickSort.js"></script> 
 </head>
 <body>
     <?php include '../assets/header.php' ?>   <!-- Header of the page -->
     <?php include '../assets/navigation.php' ?>   <!-- Top navigtion menu -->
     <main id="main">
         <section class="section">
-            <div id="bubbleSort">
-                <h1>Bubble sort</h1>
+            <div id="quickSort">
+                <h1>Quick sort</h1>
                 <ol>
                     <li>
                         <p>Insert the number of elements to populate the array: </p>
-                        <label for="txtLength">Array size: </label>
+                        <label for="txtLength">Array length: </label>
                         <input type="text" size="5" id="txtLength">
                         <button id="bttPopulate" onclick="populate()">Populate array</button>
                     </li>
@@ -28,12 +28,10 @@
                     <br>
                     <li>
                         <p>Click the button below to sort the array:</p>
-                        <button id="bttBubbleSort" disabled="true" onclick="bubbleSort()">Bubble sort</button>
-                        <button id="bttBubbleSortRecursive" disabled="true" onclick="calculateBubbleSortRecursive()">Bubble sort recursive</button>
+                        <button id="bttQuickSort" disabled="true" onclick="calculateQuickSort()">Quick sort</button>
                     </li>
                     <br>
-                    <label for="txtSortedArray">Sorted array: </label>
-                    <br>
+                    <label for="txtSortedArray">Sorted array</label><br>
                     <textarea id="txtSortedArray" rows="20" cols="100"></textarea>
                 </ol>
             </div>

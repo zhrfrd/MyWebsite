@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorting algorithms visualization </title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
+    <link rel="stylesheet" href="../stylesheets/sortingAlgrithms.css">
     <script type="text/javascript" src="../scripts/binarySearch.js"></script> 
 </head>
 <body>
