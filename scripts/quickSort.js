@@ -45,13 +45,17 @@ function quickSort(arr)
                 arr[i] = tmp;
             }
 
-            alert(i);
+            alert(j + " " + i);
         }
+
+        alert (arr );
 
         tmp = arr[i + 1];
         arr[i + 1] = pivot;
-        arr[arr.legth - 1] = tmp;
+        arr[arr.length - 1] = tmp;
     }
+
+    
 
     return arr;
 }
