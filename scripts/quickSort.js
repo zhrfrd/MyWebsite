@@ -48,11 +48,20 @@ function quickSort(arr)
             alert(j + " " + i);
         }
 
-        alert (arr );
+        alert (arr + " " + i + " tmp: " + tmp);
 
-        tmp = arr[i + 1];
-        arr[i + 1] = pivot;
-        arr[arr.length - 1] = tmp;
+        if(i < arr.length)
+        {
+            tmp = arr[i + 1];
+            arr[i + 1] = pivot;
+            arr[arr.length - 1] = tmp;
+        }
+        
+        else if (i >= arr.length)
+        {
+            i = -1;
+            alert("over");
+        }
     }
 
     
