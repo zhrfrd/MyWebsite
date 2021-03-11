@@ -30,8 +30,9 @@ function quickSort(arr)
         return arr;
 
     let tmp, pivot;
+    let i = -1;
 
-    for (let i = -1; i < arr.length; i ++)
+    while (i < arr.length)
     {
         pivot = arr[arr.length - 1];
 
@@ -48,7 +49,7 @@ function quickSort(arr)
             alert(j + " " + i);
         }
 
-        alert (arr );
+        alert (arr);
 
         tmp = arr[i + 1];
         arr[i + 1] = pivot;
