@@ -32,42 +32,24 @@ function quickSort(arr)
     let i = -1;
     pivot = arr[arr.length - 1];
 
-    //for (let i = -1; i < arr.length; i ++)
-    //{
-        for (let j = 0; j < arr.length; j ++)
+    //Partitioning process
+    for (let j = 0; j < arr.length; j ++)
+    {
+        if ((arr[j] <= pivot) && (j < arr.length))
         {
-            if ((arr[j] <= pivot) && (j < arr.length))
+            //If the array begins with an element smaller than the pivot, increase "i" and do nothing (There should be a swap between the element and itself but the result is the same)
+            if ((i == -1) && (j == 0))
+                i ++;
+
+            else
             {
-                if ((i == -1) && (j == 0))
-                {
-                    i ++;
-                    j++;
-                }
-
-                else
-                {
-                    i ++;
-                    tmp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = tmp;
-                }
+                i ++;
+                tmp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = tmp;
             }
-
-            //alert(j + " " + i);
         }
-
-        //alert ("length " + arr.length)
-
-        /*if (i == arr.length - 1)
-        {
-            tmp = arr[i];
-            arr[i + 1] = pivot;
-            arr[arr.length - 1] = tmp;
-        }*/
-        
-    //}
-
-    //alert ("My " + arr);
+    }
 
     return arr;
 }
