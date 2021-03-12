@@ -24,39 +24,50 @@ function calculateQuickSort()
 
 function quickSort(arr)
 {
-    alert("sd");
     //Case base
     if (arr.length == 1)
         return arr;
-
+   
     let tmp, pivot;
     let i = -1;
+    pivot = arr[arr.length - 1];
 
-    while (i < arr.length)
-    {
-        pivot = arr[arr.length - 1];
-
-        for (let j = i + 1; j < arr.length; j ++)
+    //for (let i = -1; i < arr.length; i ++)
+    //{
+        for (let j = 0; j < arr.length; j ++)
         {
-            if (arr[j] < pivot)
+            if ((arr[j] <= pivot) && (j < arr.length))
             {
-                i ++;
-                tmp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = tmp;
+                if ((i == -1) && (j == 0))
+                {
+                    i ++;
+                    j++;
+                }
+
+                else
+                {
+                    i ++;
+                    tmp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = tmp;
+                }
             }
 
-            alert(j + " " + i);
+            //alert(j + " " + i);
         }
 
-        alert (arr);
+        //alert ("length " + arr.length)
 
-        tmp = arr[i + 1];
-        arr[i + 1] = pivot;
-        arr[arr.length - 1] = tmp;
-    }
+        /*if (i == arr.length - 1)
+        {
+            tmp = arr[i];
+            arr[i + 1] = pivot;
+            arr[arr.length - 1] = tmp;
+        }*/
+        
+    //}
 
-    
+    //alert ("My " + arr);
 
     return arr;
 }
