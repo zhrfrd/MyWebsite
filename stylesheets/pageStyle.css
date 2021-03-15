@@ -1,11 +1,155 @@
+/*---------------------------------------BODY-----------------------------------------------*/
+
 body
 {
     background-color: #FFF;
+    font-family: Arial;
+    margin: 0px;
 }
+
+/*---------------------------------------NAV-----------------------------------------------*/
+nav
+{
+    background-color: #FFF;
+    color: #4D4D4D;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.navContent
+{
+    margin: 4px 4px;
+    display: flex;
+    align-items: center;
+}
+
+.navText
+{
+    margin: 12px;
+}
+
+.navLink
+{
+    color: #4D4D4D;
+    text-decoration: none;
+}
+
+.navLink:hover
+{
+    text-decoration: underline;
+}
+
+#bttContactMe
+{
+    background-color: #367FFC;
+    padding: 13px;
+    border-radius: 3px;
+}
+
+#bttContactMe:hover
+{
+    background-color: #4F8FFC;
+    padding: 13px;
+}
+
+#contactMeLink
+{
+    color: #FFF;
+    text-decoration: none;
+}
+
+/*----------------------------------------MAIN---------------------------------------------*/
+
+main
+{
+    min-height: 50vh;
+    align-items: center;
+}
+
+#searchContent
+{
+    width: 30%;
+    margin: auto;
+    border: 1px solid #367FFC;
+}
+
+#firstSearchText
+{
+    margin: 6px;
+}
+
+.searchText
+{
+    display: none;
+}
+
+.buttonsContainer
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttonSearchBar
+{
+    border: 1px solid #FFF;
+    background-color: #F2F2F2;
+    padding: 13px;
+    border-radius: 3px;
+    margin: 13px 5px;
+}
+
+.buttonSearchBar:hover
+{
+    border: 1px solid #D9D9D9;
+    background-color: #F2F2F2;
+    padding: 13px;
+}
+
+.searchLink
+{
+    color: #4D4D4D;
+    text-decoration: none;
+}
+
+/*---------------------------------------FOOTER--------------------------------------------*/
 
 footer
 {
     background-color: #F2F2F2;   /*Light grey*/
-    border: 1px solid #DADCE0;
-    margin-left: 0px;
+    border-top: 1px solid #DADCE0;   /*Light grey*/
+    color: #666;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.footerContent
+{
+    margin: 12px;
+}
+
+.footerText
+{
+    margin: 12px;
+}
+
+.footerLink
+{
+    color: #666;
+    text-decoration: none;
+}
+
+.footerLink:hover
+{
+    text-decoration: underline;
 }
