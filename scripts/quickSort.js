@@ -24,9 +24,13 @@ function calculateQuickSort()
 
 function quickSort(arr)
 {
+    alert(arr);
     //Case base
-    if (arr.length == 1)
+    if (arr.length <= 1)
+    {
+        alert("uno");
         return arr;
+    }
    
     let tmp, pivot;
     let i = -1;
@@ -51,5 +55,24 @@ function quickSort(arr)
         }
     }
 
-    return arr;
+    let posPivot = arr[i];   //Position of the pivot
+
+    //return arr;
+    let arrayPrePivot = arr.slice(0, posPivot);   //Slice array from 0 to pivot position and save the result iside a new array
+    let arrayPostPivot = arr.slice(posPivot + 1, arr.length);   //Slice array from piot position to array length and save the result iside a new array
+
+    
+    //alert(arrayPrePivot + "-" + pivot + "-" + arrayPostPivot);
+    arrayPrePivot = quickSort(arrayPrePivot);
+    arrayPostPivot = quickSort(arrayPostPivot);
+
+
+    //return merge(arrayPrePivot, arrayPostPivot);
+}
+
+function merge (arrPrePivot, arrPostPivot)
+{
+    let arraySorted = new Array(arrPrePivot.length + arrPostPivot.length);   //Create array with the size of the sum of the leftArray and rightArray
+
+    return arraySorted;
 }
