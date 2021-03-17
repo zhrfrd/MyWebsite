@@ -11,28 +11,17 @@
     <!-- HEADER -->
 
     <header id="header">
-        <div class="headerContent">
-            <div class="headerContentLeft">
-                <a href="../index.php"><img src="../images/navLogo.png" alt="Farid Zouheir logo"></a>
-            </div>
-            <div id="searchBar">
-                <img src="../images/searchIcon.png">
-            </div>
-            <div class="headerContentRight">
-                <span class="navText"><img src="../images/gridIcon.png" alt="My social network icon"></span>
-                <span class="navText" id="bttContactMe"><a href="contactMe.php" id="contactMeLink">Contact me</a></span>
-            </div>
+        <div id="headerContainerLeft">
+            <a href="../index.php"><img src="../images/faridLogo.png" alt="Farid logo"></a>
+            <div id="searchBar">Research bar</div>
+        </div>
+        <div id="headerContainerRight">
+            <img src="../images/gridIcon.png" alt="Grid icon">
+            <div id="contactMeButton">Contact me</div>
         </div>
     </header>
 
     <!-- NAVIGATION BAR -->
-
-    <nav id="navigation">
-        <div class="navContent">
-            <span class="navText"><a href="" class="navLink">Resume</a></span>
-            <span class="navText"><a href="" class="navLink">Projects</a></span>
-        </div>
-    </nav>
 
     <!-- MAIN CONTENT -->
 

@@ -16,11 +16,10 @@ nav
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
     font-size: 16px;
 }
 
-.navContent
+#navContent
 {
     margin: 4px 4px;
     display: flex;
@@ -76,7 +75,7 @@ main
 
 #searchBar
 {
-    min-height: 30px;
+    min-height: 31px;
     min-width: 300px;
     width: 30%;
     border: 1px solid #367FFC;

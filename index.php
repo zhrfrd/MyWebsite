@@ -11,8 +11,8 @@
 
     <!-- NAVIGATION BAR -->
 
-    <nav id="navigation">
-        <div class="navContent">
+    <nav id="nav">
+        <div id="navContent">
             <span class="navText"><a href="" class="navLink">Resume</a></span>
             <span class="navText"><a href="" class="navLink">Projects</a></span>
             <span class="navText"><img src="../images/gridIcon.png" alt="My social network icon"></span>
