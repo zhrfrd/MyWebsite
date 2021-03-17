@@ -14,19 +14,15 @@ nav
     color: #4D4D4D;
     top: 0;
     width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
     font-size: 16px;
-}
-
-#navContent
-{
-    margin: 4px 4px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
-.navText
+.navItem
 {
     margin: 12px;
 }
@@ -45,6 +41,7 @@ nav
 #bttContactMe
 {
     background-color: #367FFC;
+    color: #FFF;
     padding: 13px;
     border-radius: 3px;
 }
@@ -52,12 +49,10 @@ nav
 #bttContactMe:hover
 {
     background-color: #4F8FFC;
-    padding: 13px;
 }
 
 #contactMeLink
 {
-    color: #FFF;
     text-decoration: none;
 }
 
@@ -122,7 +117,7 @@ main
 footer
 {
     background-color: #F2F2F2;   /*Light grey*/
-    border-top: 1px solid #DADCE0;   /*Light grey*/
+    border-top: 1px solid #D9D9D9;   /*Light grey*/
     color: #666;
     bottom: 0;
     position: absolute;

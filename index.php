@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Home page</title>
     <link rel="stylesheet" href="../stylesheets/homepageStyle.css">
 </head>
 <body>
@@ -12,12 +12,10 @@
     <!-- NAVIGATION BAR -->
 
     <nav id="nav">
-        <div id="navContent">
-            <span class="navText"><a href="" class="navLink">Resume</a></span>
-            <span class="navText"><a href="" class="navLink">Projects</a></span>
-            <span class="navText"><img src="../images/gridIcon.png" alt="My social network icon"></span>
-            <a href="contactMe.php" id="contactMeLink"><span class="navText" id="bttContactMe">Contact me</span></a>
-        </div>
+        <a href="" class="navLink navItem">Resume</a>
+        <a href="" class="navLink navItem">Projects</a>
+        <a href="" class="navItem"><img src="../images/gridIcon.png" alt="My social network icon"></a>
+        <a href="../contactMe.php" id="contactMeLink" class="navItem"><div id="bttContactMe">Contact me</div></a>
     </nav>
 
     <!-- MAIN CONTENT -->
