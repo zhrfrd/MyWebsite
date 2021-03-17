@@ -7,7 +7,57 @@ body
     margin: 0px;
 }
 
+/*---------------------------------------HEADER--------------------------------------------*/
+
+header
+{
+    background-color: #F1F1F1;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.headerContent
+{
+    margin: 4px 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.headerContentLeft
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6px;
+}
+
+#searchBar
+{
+    min-height: 30px;
+    min-width: 300px;
+    width: 30%;
+    border: 1px solid #367FFC;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:flex-end
+}
+
+.headerContentRight
+{
+    margin: 6px;
+}
+
 /*---------------------------------------NAV-----------------------------------------------*/
+
 nav
 {
     background-color: #FFF;
@@ -17,19 +67,12 @@ nav
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    font-size: 15px;
-}
-
-.navContent
-{
-    margin: 4px 4px;
-    display: flex;
-    align-items: center;
+    font-size: 13px;
 }
 
 .navText
 {
-    margin: 12px;
+    margin: 9px;
 }
 
 .navLink
@@ -46,45 +89,39 @@ nav
 #bttContactMe
 {
     background-color: #367FFC;
-    padding: 13px;
+    padding: 9px;
     border-radius: 3px;
 }
 
 #bttContactMe:hover
 {
     background-color: #4F8FFC;
-    padding: 13px;
+    padding: 9px;
 }
 
 #contactMeLink
 {
     color: #FFF;
     text-decoration: none;
+    font-size: 13px;
 }
 
 /*----------------------------------------MAIN---------------------------------------------*/
 
 main
 {
-    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    min-height: 60vh;
 }
 
-#searchContent
+#pTextPresentation
 {
-    width: 30%;
-    margin: auto;
-    border: 1px solid #367FFC;
-}
-
-#firstSearchText
-{
+    font-size: 16px;
     margin: 6px;
-}
-
-.searchText
-{
-    display: none;
 }
 
 .buttonsContainer
@@ -130,7 +167,7 @@ footer
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .footerContent

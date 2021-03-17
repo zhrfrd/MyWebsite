@@ -4,51 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farid Zouheir</title>
-    <link rel="stylesheet" href="../stylesheets/pageStyle.css">
+
+    <link rel="stylesheet" href="../stylesheets/homepageStyle.css">
 </head>
 <body>
-    <?php include 'assets/navigationHome.php' ?>   <!-- Top navigtion menu -->
+
+    <!-- NAVIGATION BAR -->
+
+    <nav id="navigation">
+        <div class="navContent">
+            <span class="navText"><a href="" class="navLink">Resume</a></span>
+            <span class="navText"><a href="" class="navLink">Projects</a></span>
+            <span class="navText"><img src="../images/gridIcon.png" alt="My social network icon"></span>
+            <a href="contactMe.php" id="contactMeLink"><span class="navText" id="bttContactMe">Contact me</span></a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+
     <main id="main">
-        <div id="searchContent">
-            <p id="firstSearchText"></p>
-            <p class="searchText">My name is Farid Zouheir</p>
-            <p class="searchText">I am a Software Developer</p>
-            <p class="searchText">With a big passion for technology.</p>
-            <p class="searchText">Do you like dynamic and curious people?</p>
-            <p class="searchText">You can contact me at any time!</p>
-            <p class="searchText">Farid Zouheir | Software Developer</p>
+        <div id="logoFarid" style="font-family: 'Open Sans';">
+            <img src="../images/homepageLogo.jpg" alt="Farid Zouheir logo">
+        </div>
+        <div id="searchBar">
+            <p id="pTextPresentation"></p>
         </div>
         <div class="buttonsContainer">
-            <div class="buttonSearchBar"><a href="" class="searchLink">My Education</a></div>
-            <div class="buttonSearchBar"><a href="" class="searchLink">Work Experiences</a></div>
+            <a href="../myEducation.php" class="searchLink"><div class="buttonSearchBar">My Education</div></a>
+            <a href="" class="searchLink"><div class="buttonSearchBar">Work Experiences</div></a>
         </div>
     </main>
-    <?php include 'assets/footer.php' ?>   <!-- Footer of the page -->
 
-    <!-- Javascript -->
+    <!-- FOOTER -->
+
+    <?php include 'assets/footer.php' ?>
+
+    <!-- Javascript (Typing and Deleting animation) -->
     <script>
         var i = 0;
-        var txt1 = "Pleasure to meet you!";
-        var txt2 = "My name is Farid Zouheir";
-        var txt3 = "I am a Software Developer";
-        var txt4 = "With a big passion for technology.";
-        var txt5 = "Do you like dynamic and curious people?";
-        var txt6 = "Then, drop me a message at any time!";
-        var txt7 = "Farid Zouheir | Software Developer";
+        var arrCount = 0;
+        var textresentation = ["Pleasure to meet you!", "My name is Farid Zouheir", "And I am a Software Developer", "With a big passion for technology.", "Do you like dynamic and curious people in your team?", "Then, drop me a message at any time!", "Farid Zouheir | Software Developer"];
 
         writingAnimation();
 
         function writingAnimation()
         {
-            if (i < txt1.length)
+            if (i < textresentation[arrCount].length)
             {
-                document.getElementById("firstSearchText").textContent += txt1.charAt(i);
+                document.getElementById("pTextPresentation").textContent += textresentation[arrCount].charAt(i);
                 i++;
-                setTimeout(writingAnimation, 100);
+                setTimeout(writingAnimation, 50);
             }
 
-            else
+            else if ((i >= textresentation[arrCount].length) && (arrCount != 6))
             {
                 i --;
                 setTimeout(deletingAnimation, 1000);   //Wait 1 second before deleting the text
@@ -59,11 +67,18 @@
         {
 		    if (i >= 0)
             {
-                txt1 = txt1.substring(0, i);   //Remove last character from the string
-                document.getElementById('firstSearchText').textContent = txt1;
+                textresentation[arrCount] = textresentation[arrCount].substring(0, i);   //Remove last character from the string
+                document.getElementById('pTextPresentation').textContent = textresentation[arrCount];
                 i --;
-                setTimeout(deletingAnimation, 100);
-		    } 
+                setTimeout(deletingAnimation, 50);
+		    }
+
+            else
+            {
+                i ++;
+                arrCount ++;
+                writingAnimation();
+            }
         }
     </script>
 </body>

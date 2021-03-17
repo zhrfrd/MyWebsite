@@ -6,7 +6,7 @@
                 <span class="footerText">United Kindom</span>
             </div>
             <div class="footerContent">
-                <span class="footerText">My name is Farid Zouheir</span>
+                <span class="footerText">Farid Zouheir</span>
             </div>
             <div class="footerContent">
                 <span class="footerText"><a href="" class="footerLink">Italian</a></span>
