@@ -1,11 +1,10 @@
-<!-- Header -->
 <?php 
     echo '
         <header id="header">
             <div id="headerContainerLeft">
                 <a href="../index.php" class="headerItem"><img src="../images/faridLogo.png" alt="Farid logo"></a>
                 <div id="searchBar" class="headerItem">
-                    <span id="searchBarText"></span>
+                    <h1 id="searchBarText"></h1>
                     <div id="searchBarIconContainer"><img src="../images/searchIcon.png" alt="Magnifier icon" id="searchBarIcon"></div>
                 </div>
             </div>

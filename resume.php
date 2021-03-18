@@ -20,7 +20,10 @@
     <!-- MAIN CONTENT -->
 
     <main id="main">
-        
+        <div id="cotentList">
+        </div>
+        <div id="contentInfo">
+        </div>
     </main>
 
     <!-- FOOTER -->

@@ -1,4 +1,3 @@
-<!-- Navigation bar -->
 <?php
     echo '
         <nav id="navigation">
