@@ -8,27 +8,18 @@
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
 </head>
 <body>
-    <?php include 'assets/header.php' ?>   <!-- Header of the page -->
-    <?php include 'assets/navigation.php' ?>   <!-- Top navigtion menu -->
+    <!-- HEADER -->
+    <?php include 'assets/header.php' ?>
+
+    <!-- NAVIGATION BAR -->
+    <?php include 'assets/navigation.php' ?>
+
+    <!-- MAIN CONTENT -->
     <main id="main">
-        <section class="section">
-            <div id="myContactMe">
-                <h1>Contact me</h1>
-                <form action="/contactMe.php" method="post">
-                    <label for="txtEmail">Email address: </label><br />
-                    <input type="text" name="email_address" size="40" id="txtEmail">
-                    <br />
-                    <br />
-                    <label for="txtEmailContent">Write your email with your feedback:</label><br />
-                    <textarea name="feedback" cols="50" rows="10" id="txtEmailContent"></textarea>
-                    <br />
-                    <br />
-                    <input type="submit" name="send" value="Submit">
-                </form>
-            </div>
-        </section>
     </main>
-    <?php include 'assets/footer.php' ?>   <!-- Footer of the page -->
+
+    <!-- FOOTER -->
+    <?php include 'assets/footer.php' ?>
 
     <!-- Javascript -->
     <script>
@@ -37,7 +28,8 @@
 
         function changeNavActiveId() 
         {
-            document.getElementById("contactMe").id = "active";
+            document.getElementById("myEducation").id = "active";
+            document.getElementById("searchBarText").textContent = "Contact me";
         }
 
     </script>

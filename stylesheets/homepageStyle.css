@@ -40,7 +40,7 @@ nav
 
 #bttContactMe
 {
-    background-color: #367FFC;
+    background-color: #166DDF;
     color: #FFF;
     padding: 13px;
     border-radius: 3px;
@@ -48,7 +48,7 @@ nav
 
 #bttContactMe:hover
 {
-    background-color: #4F8FFC;
+    background-color: #2E80EA;
 }
 
 #contactMeLink
@@ -73,7 +73,7 @@ main
     min-height: 31px;
     min-width: 300px;
     width: 30%;
-    border: 1px solid #367FFC;
+    border: 1px solid #166DDF;
 }
 
 #pTextPresentation
