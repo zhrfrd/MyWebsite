@@ -12,8 +12,8 @@
     <!-- NAVIGATION BAR -->
 
     <nav id="nav">
-        <a href="" class="navLink navItem">Resume</a>
-        <a href="" class="navLink navItem">Projects</a>
+        <a href="../skills.php" class="navLink navItem">Skills</a>
+        <a href="../projects.php" class="navLink navItem">Projects</a>
         <a href="" class="navItem"><img src="../images/gridIcon.png" alt="My social network icon"></a>
         <a href="../contactMe.php" id="contactMeLink" class="navItem"><div id="bttContactMe">Contact me</div></a>
     </nav>
