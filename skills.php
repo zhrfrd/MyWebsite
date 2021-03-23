@@ -37,7 +37,7 @@
 
         function changeNavActiveId() 
         {
-            document.getElementById("resume").id = "active";
+            document.getElementById("skills").id = "active";
             document.getElementById("searchBarText").textContent = "Skills";
         }
 

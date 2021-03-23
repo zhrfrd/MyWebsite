@@ -29,7 +29,7 @@
         </div>
         <div class="buttonsContainer">
             <a href="../myEducation.php" class="searchLink"><div class="buttonSearchBar">My Education</div></a>
-            <a href="" class="searchLink"><div class="buttonSearchBar">Work Experiences</div></a>
+            <a href="../myExperience.php" class="searchLink"><div class="buttonSearchBar">Work Experiences</div></a>
         </div>
     </main>
 

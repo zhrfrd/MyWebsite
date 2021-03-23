@@ -28,7 +28,6 @@
 
         function changeNavActiveId() 
         {
-            document.getElementById("myEducation").id = "active";
             document.getElementById("searchBarText").textContent = "Contact me";
         }
 
