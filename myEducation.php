@@ -81,7 +81,7 @@
         function changeNavActiveId() 
         {
             document.getElementById("myEducation").id = "active";
-            document.getElementById("searchBarText").textContent = "My Education";
+            document.getElementById("searchBarText").textContent = "My education";
         }
 
         function changeInfoContent(infoImage, infoTitle, infoSubtitle, infoSection)

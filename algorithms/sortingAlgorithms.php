@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorting algorithms visualization </title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
-    <link rel="stylesheet" href="../stylesheets/sortingAlgrithms.css">
-    <script type="text/javascript" src="../scripts/binarySearch.js"></script> 
+    <link rel="stylesheet" href="../stylesheets/sortingAlgorithms.css">
+    <script type="text/javascript" src="../scripts/selectionSort.js"></script> 
 </head>
 <body>
     <?php include '../assets/header.php' ?>   <!-- Header of the page -->
     <?php include '../assets/navigation.php' ?>   <!-- Top navigtion menu -->
-    <main id="main">
-        <section class="section">
-            <div id="Sorting algorithms">
-            </div>
-        </section>
+    <main id="mainSorting">
+        <div class="menuSorting">
+            <div class="menuSortingButton"><input type="text" id="txtLength"></div>
+            <div class="menuSortingButton" onclick="populate()">Populate array</div>
+            <div class="menuSortingButton" onclick="selectionSort()">Selection sort</div>
+            <div class="menuSortingButton" onclick="">Bubble sort</div>
+            <div class="menuSortingButton" onclick="">Insertion sort</div>
+            <div class="menuSortingButton" onclick="">Merge sort</div>
+            <div class="menuSortingButton" onclick="">Quick sort</div>
+        </div>
     </main>
     <?php include '../assets/footer.php' ?>   <!-- Footer of the page -->
 
@@ -26,7 +31,8 @@
 
         function changeNavActiveId() 
         {
-            document.getElementById("algorithms").id = "active";
+            document.getElementById("projects").id = "active";
+            document.getElementById("searchBarText").textContent = "Projects";
         }
     </script>
 </body>

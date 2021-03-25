@@ -31,7 +31,7 @@
 
         <aside id="contentInfo">
             <div id="contentInfoImageContainer">
-                <img src="../images/HEIWLogo.jpg" id="contentInfoImage" alt="Logo of hEIW" class="contentInfoImage">
+                <img src="../images/HEIWLogo.jpg" id="contentInfoImage" alt="Logo of HEIW" class="contentInfoImage">
             </div>
             <div id="contentInfoHeader">
                 <h3 id="contentInfoTitle">Software Developer and Accessibility Officer</h3>
@@ -55,7 +55,7 @@
         function changeNavActiveId() 
         {
             document.getElementById("myExperience").id = "active";
-            document.getElementById("searchBarText").textContent = "My education";
+            document.getElementById("searchBarText").textContent = "My experience";
         }
 
         function changeInfoContent(infoImage, infoTitle, infoSubtitle, infoSection)

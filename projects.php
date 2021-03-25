@@ -24,6 +24,24 @@
                     <li><a href="projects/roulette.php">Roulette</a></li>
                     <li><a href="projects/mastermind.php">Mastermind</a></li>
                 </ul>
+                <h2>Search algorithms</h2>
+                <ul>
+                    <li><a href="algorithms/sortingAlgorithms.php">Sorting algorithms</a></li>
+                    <li><a href="algorithms/linearSearch.php">Linear search</a></li>
+                    <li><a href="algorithms/binarySearch.php">Binary search</a></li>
+                </ul>
+                <h2>Sorting algorithms</h2>
+                <ul>
+                    <li><a href="algorithms/selectionSort.php">Selection sort</a></li>
+                    <li><a href="algorithms/bubbleSort.php">Bubble sort</a></li>
+                    <li><a href="algorithms/insertionSort.php">Insertion sort</a></li>
+                    <li><a href="algorithms/mergeSort.php">Merge sort</a></li>
+                    <li><a href="algorithms/quickSort.php">Quick sort</a></li>
+                </ul>
+                <h2>Mathematics</h2>
+                <ul>
+                    <li><a href="algorithms/factorial.php">Factorial</a></li>
+                </ul>
             </div>
         </section>
     </main>

@@ -41,20 +41,20 @@
     <script>
         var i = 0;
         var arrCount = 0;
-        var textresentation = ["Pleasure to meet you!", "My name is Farid Zouheir", "And I am a Software Developer", "With a big passion for technology.", "Do you like dynamic and curious people in your team?", "Then, drop me a message at any time!", "Farid Zouheir | Software Developer"];
+        var textPresentation = ["Pleasure to meet you!", "My name is Farid Zouheir", "And I am a Software Developer", "With a big passion for technology.", "Do you like dynamic and curious people in your team?", "Then, drop me a message at any time!", "Farid Zouheir | Software Developer"];
 
         writingAnimation();
 
         function writingAnimation()
         {
-            if (i < textresentation[arrCount].length)
+            if (i < textPresentation[arrCount].length)
             {
-                document.getElementById("pTextPresentation").textContent += textresentation[arrCount].charAt(i);
+                document.getElementById("pTextPresentation").textContent += textPresentation[arrCount].charAt(i);
                 i++;
                 setTimeout(writingAnimation, 50);
             }
 
-            else if ((i >= textresentation[arrCount].length) && (arrCount != 6))
+            else if ((i >= textPresentation[arrCount].length) && (arrCount != 6))
             {
                 i --;
                 setTimeout(deletingAnimation, 1000);   //Wait 1 second before deleting the text
@@ -65,8 +65,8 @@
         {
 		    if (i >= 0)
             {
-                textresentation[arrCount] = textresentation[arrCount].substring(0, i);   //Remove last character from the string
-                document.getElementById('pTextPresentation').textContent = textresentation[arrCount];
+                textPresentation[arrCount] = textPresentation[arrCount].substring(0, i);   //Remove last character from the string
+                document.getElementById('pTextPresentation').textContent = textPresentation[arrCount];
                 i --;
                 setTimeout(deletingAnimation, 50);
 		    }

@@ -12,6 +12,7 @@ function populate()
     }
 
     myArray = myArray.sort(() => Math.random() - 0.5)   //Shuffle array elements
+    alert(myArray);
     document.getElementById("txtUnsortedArray").value = myArray;   //Output
     document.getElementById("bttBubbleSort").disabled = false;
 }

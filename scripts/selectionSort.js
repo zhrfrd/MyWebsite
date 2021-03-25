@@ -12,6 +12,7 @@ function populate()
     }
 
     myArray = myArray.sort(() => Math.random() - 0.5)   //Shuffle array elements
+    alert(myArray);
     document.getElementById("txtUnsortedArray").value = myArray;   //Output
     document.getElementById("bttSelectionSort").disabled = false;
     document.getElementById("bttSelectionSortRecursive").disabled = false;
@@ -35,6 +36,7 @@ function selectionSort()
         }
     }
 
+    alert(myArray);
     document.getElementById("txtSortedArray").value = myArray;
 }
 
