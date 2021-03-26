@@ -22,6 +22,7 @@
             <div class="menuSortingButton" onclick="">Merge sort</div>
             <div class="menuSortingButton" onclick="">Quick sort</div>
         </div>
+        <div id="containerBars"></div>
     </main>
     <?php include '../assets/footer.php' ?>   <!-- Footer of the page -->
 
