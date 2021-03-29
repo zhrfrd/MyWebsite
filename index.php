@@ -14,7 +14,19 @@
     <nav id="nav">
         <a href="../skills.php" class="navLink navItem">Skills</a>
         <a href="../projects.php" class="navLink navItem">Projects</a>
-        <a href="" class="navItem"><img src="../images/gridIcon.png" alt="My social network icon"></a>
+        <div class="menuBlock">
+            <img src="../images/gridIcon.png"  onclick="myFunction()" class="menuIcon navItem" alt="My social network icon">
+            <div id="dropDownMenu" class="menuContainer">
+                <div class="menuImageContainer"><a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank"><img class="menuImage" src="../images/linkedinLogo.png" alt="Farid logo"></a></div>
+                <div class="menuImageContainer"><a href="https://github.com/zhrfrd" target="blank"><img class="menuImage" src="../images/githubLogo.png" alt="Github logo"></a></div>
+                <div class="menuImageContainer"><a href=""><img class="menuImage" src="../images/gmailLogo.png" alt="Gmail logo"></a></div>
+            </div>
+        </div>
+        <!--<div id="menuContainer">
+            <div class="menuImageContainer"><img class="menuImage" src="../images/linkedinLogo.png" alt="Linkedin logo"></div>
+            <div class="menuImageContainer"><img class="menuImage" src="../images/githubLogo.png" alt="Github logo"></div>
+            <div class="menuImageContainer"><img class="menuImage" src="../images/gmailLogo.png" alt="Gmail logo"></div>
+        </div>-->
         <a href="../contactMe.php" id="contactMeLink" class="navItem"><div id="bttContactMe">Contact me</div></a>
     </nav>
 
@@ -78,6 +90,29 @@
                 writingAnimation();
             }
         }
+
+        function myFunction() 
+        {
+            document.getElementById("dropDownMenu").classList.toggle("menuShow");
+        }
+
+        //When you click outside the dropdown menu, close the drobdown menu
+        window.onclick = function(event) 
+        {
+            if (!event.target.matches('.menuIcon')) 
+            {
+                var dropdowns = document.getElementsByClassName("menuContainer");
+                var i;
+            
+                for (i = 0; i < dropdowns.length; i++) 
+                {
+                    var openDropdown = dropdowns[i];
+            
+                    if (openDropdown.classList.contains('menuShow')) 
+                        openDropdown.classList.remove('menuShow');
+                }
+            }
+        }        
     </script>
 </body>
 </html>

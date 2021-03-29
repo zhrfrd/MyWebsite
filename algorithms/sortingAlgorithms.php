@@ -17,12 +17,13 @@
             <div class="menuSortingButton"><input type="text" id="txtLength"></div>
             <div class="menuSortingButton" onclick="populate()">Populate array</div>
             <div class="menuSortingButton" onclick="selectionSort()">Selection sort</div>
-            <div class="menuSortingButton" onclick="">Bubble sort</div>
+            <div class="menuSortingButton" onclick="calculateSelectionSortRecursive()">Bubble sort</div>
             <div class="menuSortingButton" onclick="">Insertion sort</div>
             <div class="menuSortingButton" onclick="">Merge sort</div>
             <div class="menuSortingButton" onclick="">Quick sort</div>
         </div>
         <div id="containerBars"></div>
+        <p id="res"></p>
     </main>
     <?php include '../assets/footer.php' ?>   <!-- Footer of the page -->
 

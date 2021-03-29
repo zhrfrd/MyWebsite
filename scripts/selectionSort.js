@@ -24,40 +24,69 @@ function populate()
 
 function selectionSort()
 {
-    let temp;
-    let tempBar = document.createElement("div");
+    var temp;
+    var t = 0;
+    var tempBar = document.createElement("div");
     tempBar.classList.add("divBar");
-    
-    for (count1 = 0; count1 < arrayLength; count1 ++)
+
+//------------------------------------
+
+    var count1 = 0;
+    var count2 = count1 + 1;
+    var min;
+
+    for(var count1 = 0; count1 < myArray.length; count1 ++) 
     {
-        for (count2 = count1; count2 < arrayLength; count2 ++)
+        //Find the smallest element in the array
+        var min = count1;
+
+        for(var count2 = count1 + 1; count2 < myArray.length; count2 ++)
         {
-            if (myArray[count2] < myArray[count1])
-            {
-                //Swap the two value of the array
-                temp = myArray[count2];
-                tempBar = bar[count2];
+            if(myArray[count2] < myArray[min]) 
+                min = count2;   //Once found the smallest element set it as "min"
+        }
 
-                myArray[count2] = myArray[count1];
-                bar[count2] = bar[count1];
-
-                myArray[count1] = temp;
-                bar[count1] = tempBar;
-
-                document.getElementsByClassName("divBar")[count2].style.backgroundColor="blue";
-
-                /*tempBar = document.getElementsByClassName("divBar")[count2];
-                document.getElementsByClassName("divBar")[count2].replaceWith(document.getElementsByClassName("divBar")[count1]);
-                document.getElementsByClassName("divBar")[count1].replaceWith(tempBar);*/
-
-                document.getElementById("containerBars").appendChild(bar);
-            }
+        if (min != count1) 
+        {
+            //Swap the elements
+            temp = myArray[count1]; 
+            myArray[count1] = myArray[min];
+            myArray[min] = temp;   
+            
+            document.getElementsByClassName("divBar")[min].before(document.getElementsByClassName("divBar")[count1]);
+            document.getElementsByClassName("divBar")[count1].before(document.getElementsByClassName("divBar")[min]);
         }
     }
 
-    
+//-------------------------------------------------
 
-    document.getElementById("txtSortedArray").value = myArray;
+
+    /*setInterval(function(){
+    for(var count1 = 0; count1 < myArray.length; count1 ++) 
+    {
+        //Find the smallest element in the array
+        let min = count1;
+
+        for(let count2 = count1 + 1; count2 < myArray.length; count2 ++)
+        {
+            if(myArray[count2] < myArray[min]) 
+                min = count2;   //Once found the smallest element set it as "min"
+        }
+
+        if (min != count1) 
+        {
+            //Swap the elements
+            temp = myArray[count1]; 
+            myArray[count1] = myArray[min];
+            myArray[min] = temp;   
+            
+            document.getElementsByClassName("divBar")[min].before(document.getElementsByClassName("divBar")[count1]);
+            document.getElementsByClassName("divBar")[count1].before(document.getElementsByClassName("divBar")[min]);
+        }
+    }}, 1000);*/
+
+    //document.getElementById("containerBars").appendChild(document.getElementsByClassName("divBar"));
+    //document.getElementById("txtSortedArray").value = myArray;
 }
 
 function calculateSelectionSortRecursive()
@@ -66,7 +95,7 @@ function calculateSelectionSortRecursive()
     let count2 = 1;
     let arraySorted = selectionSortRecursive(count1, count2);
 
-    document.getElementById("txtSortedArray").value = arraySorted;
+    alert(arraySorted);
 }
 
 function selectionSortRecursive(count1, count2)
@@ -93,6 +122,7 @@ function selectionSortRecursive(count1, count2)
             myArray[count1] = myArray[count2];
             myArray[count2] = temp;
             count2 ++;
+            
             myArray = selectionSortRecursive(count1, count2);
         }
 
