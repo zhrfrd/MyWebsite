@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My experience</title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
+    <script type="text/javascript" src="../scripts/dropdownMenu.js"></script> 
 </head>
 <body>
     <!-- HEADER -->
@@ -18,12 +19,12 @@
     <main id="main">
         <section id="contentList">
             <div class="contentItem">
-                <h2 class="hTitle" tabindex="0" onclick="changeInfoContent('../images/HEIWLogo.jpg','Software Developer and Accessibility Officer', 'Health Education and Improvement Wales (HEIW)', '1')">Software Developer and Accessibility Officer - Health Education and Improvement Wales (HEIW)</h2>
+                <div tabindex="0" onclick="changeInfoContent('../images/HEIWLogo.jpg','Software Developer and Accessibility Officer', 'Health Education and Improvement Wales (HEIW)', '1')" onkeypress="changeInfoContent('../images/HEIWLogo.jpg','Software Developer and Accessibility Officer', 'Health Education and Improvement Wales (HEIW)', '1')"><h2 class="hTitle">Software Developer and Accessibility Officer - Health Education and Improvement Wales (HEIW)</h2></div>
                 <a href="https://heiw.nhs.wales/" class="aUrl" target="blank">https://heiw.nhs.wales/</a>
                 <p class="pDescription">2021 till now - I joined HEIW in January 2021 with the role of <strong>Software Developer and Accessibility Officer</strong>.</p>
             </div>
             <div class="contentItem">
-                <h2 class="hTitle" tabindex="0" onclick="changeInfoContent('../images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '2')">Teacher Assistant (Computing) - Southwark College</h2>
+                <div tabindex="0" onclick="changeInfoContent('../images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '2')" onkeypress="changeInfoContent('../images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '2')"><h2 class="hTitle">Teacher Assistant (Computing) - Southwark College</h2></div>
                 <a href="https://www.southwark.ac.uk/" class="aUrl" target="blank">https://www.southwark.ac.uk/</a>
                 <p class="pDescription">2019 to 2020 - During my final year at <em>University of Greenwich</em> I also got the position as <strong>Teacher Assistant</strong> for the <strong>Computing</strong> course.</p>
             </div>
@@ -34,7 +35,7 @@
                 <img src="../images/HEIWLogo.jpg" id="contentInfoImage" alt="Logo of HEIW" class="contentInfoImage">
             </div>
             <div id="contentInfoHeader">
-                <h3 id="contentInfoTitle">Software Developer and Accessibility Officer</h3>
+                <h3 id="contentInfoTitle" tabindex="-1">Software Developer and Accessibility Officer</h3>
                 <p id="contentInfoSubtitle">Health Education and Improvement Wales (HEIW)</p>
             </div>
             <div id="contentInfoTextContainer">
@@ -64,6 +65,8 @@
             document.getElementById("contentInfoTitle").textContent = infoTitle;
             document.getElementById("contentInfoSubtitle").textContent = infoSubtitle;
 
+            document.querySelector("h3").focus();   //Focus to the header of ifo content (Accessibility)
+
             switch (infoSection)
             {
                 case "1":
@@ -79,7 +82,6 @@
                 default:
             }
         }
-
     </script>
 </body>
 </html>

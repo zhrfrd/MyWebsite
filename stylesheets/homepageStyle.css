@@ -53,8 +53,8 @@ nav
   /* Dropdown Content (Hidden by Default) */
 .menuContainer
 {
-    padding: 20px 40px 20px 30px;
-    width: 160px;
+    background-color: #FFF;
+    padding: 10px;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
@@ -65,19 +65,35 @@ nav
     box-shadow: 0px 0px 3px #BFBFBF;
     z-index: 1;
     visibility: hidden;
+    flex-wrap: wrap;
     right: 0;
+    border-radius: 4px;
 }
 
 .menuImageContainer
 {
-    height: 40px;
-    width: 40px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.menuImageContainer:hover
+{
+    background-color: #F2F2F2;
 }
 
 .menuImage
 {
     max-height: 100%;
     min-width: 100%;
+}
+
+.menuImageP
+{
+    line-height: 1px;
 }
 
  /*Show the dropdown menu (Javascript)*/

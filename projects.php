@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
+    <script type="text/javascript" src="../scripts/dropdownMenu.js"></script> 
 </head>
 <body>
     <!-- HEADER -->
@@ -59,7 +60,6 @@
             document.getElementById("projects").id = "active";
             document.getElementById("searchBarText").textContent = "Projects";
         }
-
     </script>
 </body>
 </html>

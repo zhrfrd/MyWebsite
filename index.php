@@ -14,19 +14,14 @@
     <nav id="nav">
         <a href="../skills.php" class="navLink navItem">Skills</a>
         <a href="../projects.php" class="navLink navItem">Projects</a>
-        <div class="menuBlock">
-            <img src="../images/gridIcon.png"  onclick="myFunction()" class="menuIcon navItem" alt="My social network icon">
+        <div class="menuBlock" role="button" tabindex="0" aria-pressed="false" onkeypress="openDropdown()" onclick="openDropdown()">
+            <img src="../images/gridIcon.png" class="menuIcon navItem" alt="My social network icon">
             <div id="dropDownMenu" class="menuContainer">
-                <div class="menuImageContainer"><a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank"><img class="menuImage" src="../images/linkedinLogo.png" alt="Farid logo"></a></div>
-                <div class="menuImageContainer"><a href="https://github.com/zhrfrd" target="blank"><img class="menuImage" src="../images/githubLogo.png" alt="Github logo"></a></div>
-                <div class="menuImageContainer"><a href=""><img class="menuImage" src="../images/gmailLogo.png" alt="Gmail logo"></a></div>
+                <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank"><img class="menuImage" src="../images/linkedinLogo.png" alt="Farid logo" style="height: 40px;"></a><p class="menuImageP">LinkedIn</p></div>
+                <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://github.com/zhrfrd" target="blank"><img class="menuImage" src="../images/githubLogo.png" alt="Github logo" style="height: 40px;"></a><p class="menuImageP">GitHub</p></div>
+                <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href=""><img class="menuImage" src="../images/gmailLogo.png" alt="Gmail logo" style="height: 40px;"></a><p class="menuImageP">Gmail</p></div>
             </div>
         </div>
-        <!--<div id="menuContainer">
-            <div class="menuImageContainer"><img class="menuImage" src="../images/linkedinLogo.png" alt="Linkedin logo"></div>
-            <div class="menuImageContainer"><img class="menuImage" src="../images/githubLogo.png" alt="Github logo"></div>
-            <div class="menuImageContainer"><img class="menuImage" src="../images/gmailLogo.png" alt="Gmail logo"></div>
-        </div>-->
         <a href="../contactMe.php" id="contactMeLink" class="navItem"><div id="bttContactMe">Contact me</div></a>
     </nav>
 
@@ -91,7 +86,7 @@
             }
         }
 
-        function myFunction() 
+        function openDropdown() 
         {
             document.getElementById("dropDownMenu").classList.toggle("menuShow");
         }

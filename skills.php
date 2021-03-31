@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills</title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
+    <script type="text/javascript" src="../scripts/dropdownMenu.js"></script> 
 </head>
 <body>
 
@@ -40,7 +41,6 @@
             document.getElementById("skills").id = "active";
             document.getElementById("searchBarText").textContent = "Skills";
         }
-
     </script>
 </body>
 </html>
