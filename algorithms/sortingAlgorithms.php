@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
     <link rel="stylesheet" href="../stylesheets/sortingAlgorithms.css">
     <script type="text/javascript" src="../scripts/selectionSort.js"></script> 
+    <script type="text/javascript" src="../scripts/bubbleSort.js"></script> 
 </head>
 <body>
     <?php include '../assets/header.php' ?>   <!-- Header of the page -->
@@ -17,7 +18,7 @@
             <div class="menuSortingButton"><input type="text" id="txtLength"></div>
             <div class="menuSortingButton" onclick="populate()">Populate array</div>
             <div class="menuSortingButton" onclick="selectionSort()">Selection sort</div>
-            <div class="menuSortingButton" onclick="calculateSelectionSortRecursive()">Bubble sort</div>
+            <div class="menuSortingButton" onclick="bubbleSort()">Bubble sort</div>
             <div class="menuSortingButton" onclick="">Insertion sort</div>
             <div class="menuSortingButton" onclick="">Merge sort</div>
             <div class="menuSortingButton" onclick="">Quick sort</div>
