@@ -21,32 +21,32 @@
         <section id="contentList">
             <div class="contentItem">
                 <div role="button" tabindex="0" onclick="changeInfoContent('../images/greenwichUniversityLogo.jpeg','BSc (Hons) Computing', 'University of Greenwich', '1')" onkeypress="changeInfoContent('../images/greenwichUniversityLogo.jpeg','BSc (Hons) Computing', 'University of Greenwich', '1')"><h2 class="hTitle">BSc (Hons) Computing - University of Greenwich</h2></div>
-                <a href="https://www.gre.ac.uk/" class="aUrl" target="blank">https://www.gre.ac.uk/</a>
+                <a href="https://www.gre.ac.uk/" class="aUrl" target="blank" aria-label="Link to University of Greenwich website">https://www.gre.ac.uk/</a>
                 <p class="pDescription">2019 to 2020 - I graduated in June 2020 in Computing with <strong>First class Honours</strong>.</p>
             </div>
             <div class="contentItem">
                 <div role="button" tabindex="0" onclick="changeInfoContent('../images/greenwichUniversityLogo.jpeg','FdSc Business Information Technology', 'University of Greenwich', '2')" onkeypress="changeInfoContent('../images/greenwichUniversityLogo.jpeg','FdSc Business Information Technology', 'University of Greenwich', '2')"><h2 class="hTitle">FdSc Business Information Technology - University of Greenwich</h2></div>
-                <a href="https://www.gre.ac.uk/" class="aUrl" target="blank">https://www.gre.ac.uk/</a>
+                <a href="https://www.gre.ac.uk/" class="aUrl" target="blank" aria-label="Link to University of Greenwich website">https://www.gre.ac.uk/</a>
                 <p class="pDescription">2017 to 2019 - I graduated in June 2019 in Business Information Technology with <strong>Distinction</strong>.</p>
             </div>
             <div class="contentItem">
                 <div role="button" tabindex="0" onclick="changeInfoContent('../images/lewishamLogo.png','HE Computing', 'Lewisham  College', '3')" onkeypress="changeInfoContent('../images/lewishamLogo.png','HE Computing', 'Lewisham  College', '3')"><h2 class="hTitle">HE Computing - Lewisham College</h2></div>
-                <a href="https://www.lscollege.ac.uk/" class="aUrl" target="blank">https://www.lscollege.ac.uk/</a>
+                <a href="https://www.lewisham.ac.uk/" class="aUrl" target="blank" aria-label="Link to Lewisham College website">https://www.lewisham.ac.uk/</a>
                 <p class="pDescription">2016 to 2017 - I received my Access to Higher Education diploma in June 2017 after following the Computing programme.</p>
             </div>
             <div class="contentItem">
                 <div role="button" tabindex="0" onclick="changeInfoContent('../images/southwarkLogo.png','GCSE Math', 'Southwark College', '4')" onkeypress="changeInfoContent('../images/southwarkLogo.png','GCSE Math', 'Southwark College', '4')"><h2 class="hTitle">GCSE Math - Southwark College</h2></div>
-                <a href="https://www.lscollege.ac.uk/" class="aUrl" target="blank">https://www.lscollege.ac.uk/</a>
+                <a href="https://www.southwark.ac.uk/" class="aUrl" target="blank" aria-label="Link to Southwark College website">https://www.southwark.ac.uk/</a>
                 <p class="pDescription">2018 to 2019 - During the last year of Foundation (FdSc) I followed, in parallel, the GCSE Math course at Southwark College.</p>
             </div>
             <div class="contentItem">
                 <div role="button" tabindex="0" onclick="changeInfoContent('../images/southwarkLogo.png','GCSE English', 'Southwark College', '5')" onkeypress="changeInfoContent('../images/southwarkLogo.png','GCSE English', 'Southwark College', '5')"><h2 class="hTitle">GCSE English - Southwark College</h2></div>
-                <a href="https://www.lscollege.ac.uk/" class="aUrl" target="blank">https://www.lscollege.ac.uk/</a>
+                <a href="https://www.southwark.ac.uk/" class="aUrl" target="blank" aria-label="Link to Southwark College website">https://www.southwark.ac.uk/</a>
                 <p class="pDescription">2018 to 2019 - During the last year of Foundation (FdSc) I followed, together with GCSE Math, the GCSE English course at Southwark College</p>
             </div>
             <div class="contentItem">
                 <div role="button" tabindex="0" onclick="changeInfoContent('../images/southwarkLogo.png','English Entry Level 1', 'Southwark College', '6')" onkeypress="changeInfoContent('../images/southwarkLogo.png','English Entry Level 1', 'Southwark College', '6')"><h2 class="hTitle">English Entry Level 1 - Southwark College</h2></div>
-                <a href="https://www.lscollege.ac.uk/" class="aUrl" target="blank">https://www.lscollege.ac.uk/</a>
+                <a href="https://www.southwark.ac.uk/" class="aUrl" target="blank" aria-label="Link to Southwark College website">https://www.southwark.ac.uk/</a>
                 <p class="pDescription">2014 to 2015 - When I moved to London, from Italy, I undertook the English Entry Level 1 course to learn and improve my English language.</p>
             </div>
             <div class="contentItem">

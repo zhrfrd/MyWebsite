@@ -20,12 +20,12 @@
         <section id="contentList">
             <div class="contentItem">
                 <div tabindex="0" onclick="changeInfoContent('../images/HEIWLogo.jpg','Software Developer and Accessibility Officer', 'Health Education and Improvement Wales (HEIW)', '1')" onkeypress="changeInfoContent('../images/HEIWLogo.jpg','Software Developer and Accessibility Officer', 'Health Education and Improvement Wales (HEIW)', '1')"><h2 class="hTitle">Software Developer and Accessibility Officer - Health Education and Improvement Wales (HEIW)</h2></div>
-                <a href="https://heiw.nhs.wales/" class="aUrl" target="blank">https://heiw.nhs.wales/</a>
+                <a href="https://heiw.nhs.wales/" class="aUrl" target="blank" aria-label="Link to HEIW website">https://heiw.nhs.wales/</a>
                 <p class="pDescription">2021 till now - I joined HEIW in January 2021 with the role of <strong>Software Developer and Accessibility Officer</strong>.</p>
             </div>
             <div class="contentItem">
                 <div tabindex="0" onclick="changeInfoContent('../images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '2')" onkeypress="changeInfoContent('../images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '2')"><h2 class="hTitle">Teacher Assistant (Computing) - Southwark College</h2></div>
-                <a href="https://www.southwark.ac.uk/" class="aUrl" target="blank">https://www.southwark.ac.uk/</a>
+                <a href="https://www.southwark.ac.uk/" class="aUrl" target="blank" aria-label="Link to Southwark College website">https://www.southwark.ac.uk/</a>
                 <p class="pDescription">2019 to 2020 - During my final year at <em>University of Greenwich</em> I also got the position as <strong>Teacher Assistant</strong> for the <strong>Computing</strong> course.</p>
             </div>
         </section>
