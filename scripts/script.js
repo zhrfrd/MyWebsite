@@ -1,17 +1,20 @@
 var myArray = new Array();
-var container = document.getElementById("arrayContainer");
+var container = document.getElementById("containerBars");
 var arrayLength;
+var transitionSpeed;
 
 //Function to generate the array of divBlocks
 function populateArray() 
 {
     arrayLength = parseInt(document.getElementById("txtLength").value);
+    transitionSpeed = parseInt(document.getElementById("txtSpeed").value);
 
     for (var i = 0; i < arrayLength; i++) 
     {
         var value = Math.ceil(Math.random() * 100);   //Generate a random number from 1 to 100 inclusive
-        myArray[i] = value;   //Populate array
         var arrayElementDiv = document.createElement("div");   //Create a div HTML element
+
+        myArray[i] = value;   //Populate array
         arrayElementDiv.classList.add("divElement");   //Assign a class to the div HTML element
   
         //Create style to the div element
@@ -20,11 +23,12 @@ function populateArray()
   
         //Create the labels to show the value of the div
         var arrayElementDivLabel = document.createElement("label");
-        arrayElementDivLabel.classList.add("divElementStyle");
+        arrayElementDivLabel.classList.add("divLabelStyle");
         arrayElementDivLabel.textContent = value;
 
         arrayElementDiv.appendChild(arrayElementDivLabel);   
-        container.appendChild(arrayElementDiv);
+        //container.appendChild(arrayElementDiv);
+        document.getElementById("containerBars").appendChild(arrayElementDiv);
     }
 }
 
@@ -32,6 +36,7 @@ function populateArray()
 async function bubbleSort() 
 {
     var divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" and 
+    var tempArr;
   
     //Scan through the array
     for (var i = 0; i < arrayLength; i ++)
@@ -42,14 +47,22 @@ async function bubbleSort()
             divBlocks[j].style.backgroundColor = "red";
             divBlocks[j + 1].style.backgroundColor = "red";
   
-            var value1 = Number(divBlocks[j].childNodes[0].textContent);       //Get the value of the block label, save it as a number ad assign it to the variable
-            var value2 = Number(divBlocks[j + 1].childNodes[0].textContent);   //
+            var value1 = myArray[j];       //Get the value of the block label, save it as a number ad assign it to the variable
+            var value2 = myArray[j + 1];   //
   
             //Compare the value of the two div blocks
             if (value1 > value2) 
             {
-                await swap(divBlocks[j], divBlocks[j + 1], myArray[j], myArray[j + 1]);   //Await "stops" the normal execution flow to run the function (swap). await needs to return the Promise result
+                await swap(divBlocks[j], divBlocks[j + 1]);   //Await "stops" the normal execution flow to run the function (swap). await needs to return the Promise result
                 divBlocks = document.querySelectorAll(".divElement");   //Update divBlocks after swapping
+            }
+
+            //Swap between array elements
+            if (myArray[j] > myArray[j + 1])
+            {
+                tempArr = myArray[j];
+                myArray[j] = myArray[j + 1]
+                myArray[j + 1] = tempArr;
             }
   
             //Changing the color to the previous one
@@ -65,18 +78,12 @@ async function bubbleSort()
 }
 
 //Promise to swap the two elements
-function swap(div1, div2, arrElement1, arrElement2) 
+function swap(div1, div2) 
 {
     return new Promise((resolve) => 
     {
         //For exchanging styles of two divBlocks
         var tempDiv;
-        var tempArr;
-
-        //Swap between array elements
-        tempArr = arrElement1;
-        arrElement1 = arrElement2;
-        arrElement2 = tempArr;
 
         //Swap between divs
         tempDiv = div1.style.transform;
@@ -85,12 +92,12 @@ function swap(div1, div2, arrElement1, arrElement2)
 
         window.requestAnimationFrame(function() 
         {
-            //For waiting for .25 sec
+            //Insert updated element after milliseconds waiting time
             setTimeout(() => 
             {
                 container.insertBefore(div2, div1);
                 resolve();
-            }, 500);
+            }, transitionSpeed);
         });
     });
 }

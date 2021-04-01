@@ -16,7 +16,8 @@
     <main id="mainSorting">
         <div class="menuSorting">
             <div class="menuSortingButton"><input type="text" id="txtLength"></div>
-            <div class="menuSortingButton" onclick="populate()">Populate array</div>
+            <div class="menuSortingButton"><input type="text" id="txtSpeed"></div>
+            <div class="menuSortingButton" onclick="populateArray()">Populate array</div>
             <div class="menuSortingButton" onclick="selectionSort()">Selection sort</div>
             <div class="menuSortingButton" onclick="bubbleSort()">Bubble sort</div>
             <div class="menuSortingButton" onclick="">Insertion sort</div>
@@ -24,11 +25,11 @@
             <div class="menuSortingButton" onclick="">Quick sort</div>
         </div>
         <div id="containerBars"></div>
-        <p id="res"></p>
     </main>
     <?php include '../assets/footer.php' ?>   <!-- Footer of the page -->
 
     <!-- Javascript -->
+    <script src="../scripts/script.js"></script>
     <script>
         changeNavActiveId();   //Change the id of the tab (inside the top navigation) relative the the actual page to "active" in order change the color through CSS
 

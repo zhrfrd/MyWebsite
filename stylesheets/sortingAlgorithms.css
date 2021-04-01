@@ -2,6 +2,9 @@
 {
     width: 100%;
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menuSorting
@@ -25,16 +28,27 @@
 
 #containerBars
 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: center;
+    background-color: white;
+    height: 413px;
+    position: relative;
+    margin-top: 64px;
 }
 
-.divBar
+.divElement 
 {
-    width: 50px;
-    background-color: red;
+    width: 28px;
+    background-color: purple;
+    position: absolute;
+    bottom: 0px;
     margin: 1px;
+    transition: 0.2s;
+}
+  
+.divLabelStyle
+{
+    position: absolute;
+    color: black;
+    margin-top: -20px;   /*Position on top of bar 20px*/
+    width: 100%;
+    text-align: center;
 }
