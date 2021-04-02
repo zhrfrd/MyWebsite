@@ -15,8 +15,8 @@
     <?php include '../assets/navigation.php' ?>   <!-- Top navigtion menu -->
     <main id="mainSorting">
         <div class="menuSorting">
-            <div class="menuSortingButton"><input type="text" id="txtLength"></div>
-            <div class="menuSortingButton"><input type="text" id="txtSpeed"></div>
+            <div class="menuSortingInput"><label for="rngSize">Array size</label><input type="range" id="rngSize" min="1" max="50" value="25"><span id="spnSize"></span></div>
+            <div class="menuSortingInput"><label for="rngSpeed">Sorting speed</label><input type="range" id="rngSpeed" min="50" max="1000" value="500"><span id="spnSpeed"></span></div>
             <div class="menuSortingButton" onclick="populateArray()">Populate array</div>
             <div class="menuSortingButton" onclick="selectionSort()">Selection sort</div>
             <div class="menuSortingButton" onclick="bubbleSort()">Bubble sort</div>
@@ -24,7 +24,9 @@
             <div class="menuSortingButton" onclick="">Merge sort</div>
             <div class="menuSortingButton" onclick="">Quick sort</div>
         </div>
-        <div id="containerBars"></div>
+        <div id="containerAllBars">
+            <div id="containerBar"></div>
+        </div>
     </main>
     <?php include '../assets/footer.php' ?>   <!-- Footer of the page -->
 
@@ -32,11 +34,36 @@
     <script src="../scripts/script.js"></script>
     <script>
         changeNavActiveId();   //Change the id of the tab (inside the top navigation) relative the the actual page to "active" in order change the color through CSS
+        populateArray();
 
         function changeNavActiveId() 
         {
             document.getElementById("projects").id = "active";
             document.getElementById("searchBarText").textContent = "Projects";
+        }
+
+        //Size
+        var rngSize = document.getElementById("rngSize");
+        var spnSizeOutput = document.getElementById("spnSize");
+
+        //Speed
+        var rngSpeed = document.getElementById("rngSpeed");
+        var spnSpeedOutput = document.getElementById("spnSpeed");
+
+        spnSizeOutput.innerHTML = rngSize.value;
+        spnSpeedOutput.innerHTML = rngSpeed.value + " ms";
+
+        //Update in realtime the size of the array with the movement of the range tag
+        rngSize.oninput = function()
+        {
+            spnSizeOutput.innerHTML = this.value;
+            populateArray();
+        }
+
+        //Set sorting speed
+        rngSpeed.oninput = function()
+        {
+            spnSpeedOutput.innerHTML = this.value + " ms";
         }
     </script>
 </body>

@@ -1,13 +1,15 @@
 var myArray = new Array();
-var container = document.getElementById("containerBars");
+var containerBar = document.getElementById("containerBar");
 var arrayLength;
 var transitionSpeed;
 
 //Function to generate the array of divBlocks
 function populateArray() 
 {
-    arrayLength = parseInt(document.getElementById("txtLength").value);
-    transitionSpeed = parseInt(document.getElementById("txtSpeed").value);
+    let widthContainerBars = 0;
+    document.getElementById("containerBar").innerHTML = '';
+
+    arrayLength = parseInt(document.getElementById("rngSize").value);
 
     for (var i = 0; i < arrayLength; i++) 
     {
@@ -27,9 +29,13 @@ function populateArray()
         arrayElementDivLabel.textContent = value;
 
         arrayElementDiv.appendChild(arrayElementDivLabel);   
-        //container.appendChild(arrayElementDiv);
-        document.getElementById("containerBars").appendChild(arrayElementDiv);
+        containerBar.appendChild(arrayElementDiv);
+        document.getElementById("containerBar").appendChild(arrayElementDiv);
+
+        widthContainerBars += 30;
     }
+
+    document.getElementById("containerAllBars").style.width = widthContainerBars + "px";   //Update width of the containerAllBars
 }
 
 //Asynchronous BubbleSort function (Accepts await expressions)
@@ -37,6 +43,8 @@ async function bubbleSort()
 {
     var divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" and 
     var tempArr;
+
+    transitionSpeed = parseInt(document.getElementById("rngSpeed").value);
   
     //Scan through the array
     for (var i = 0; i < arrayLength; i ++)
@@ -95,7 +103,7 @@ function swap(div1, div2)
             //Insert updated element after milliseconds waiting time
             setTimeout(() => 
             {
-                container.insertBefore(div2, div1);
+                containerBar.insertBefore(div2, div1);
                 resolve();
             }, transitionSpeed);
         });
