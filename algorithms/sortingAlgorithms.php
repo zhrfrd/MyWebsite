@@ -7,8 +7,6 @@
     <title>Sorting algorithms visualization </title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
     <link rel="stylesheet" href="../stylesheets/sortingAlgorithms.css">
-    <script type="text/javascript" src="../scripts/selectionSort.js"></script> 
-    <script type="text/javascript" src="../scripts/bubbleSort.js"></script> 
 </head>
 <body>
     <?php include '../assets/header.php' ?>   <!-- Header of the page -->
@@ -17,7 +15,6 @@
         <div class="menuSorting">
             <div class="menuSortingInput"><label for="rngSize">Array size</label><input type="range" id="rngSize" min="1" max="50" value="25"><span id="spnSize"></span></div>
             <div class="menuSortingInput"><label for="rngSpeed">Sorting speed</label><input type="range" id="rngSpeed" min="50" max="1000" value="500"><span id="spnSpeed"></span></div>
-            <div class="menuSortingButton" onclick="populateArray()">Populate array</div>
             <div class="menuSortingButton" onclick="selectionSort()">Selection sort</div>
             <div class="menuSortingButton" onclick="bubbleSort()">Bubble sort</div>
             <div class="menuSortingButton" onclick="">Insertion sort</div>
@@ -31,7 +28,9 @@
     <?php include '../assets/footer.php' ?>   <!-- Footer of the page -->
 
     <!-- Javascript -->
-    <script src="../scripts/script.js"></script>
+    <script type="text/javascript" src="../scripts/selectionSort.js"></script> 
+    <script type="text/javascript" src="../scripts/bubbleSort.js"></script> 
+    <!--<script src="../scripts/script.js"></script>-->
     <script>
         changeNavActiveId();   //Change the id of the tab (inside the top navigation) relative the the actual page to "active" in order change the color through CSS
         populateArray();
