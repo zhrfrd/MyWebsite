@@ -11,7 +11,7 @@ function populateArray()
 
     arrayLength = parseInt(document.getElementById("rngSize").value);
 
-    for (var i = 0; i < arrayLength; i++) 
+    for (let i = 0; i < arrayLength; i++) 
     {
         var value = Math.ceil(Math.random() * 100);   //Generate a random number from 1 to 100 inclusive
         var arrayElementDiv = document.createElement("div");   //Create a div HTML element
@@ -39,14 +39,37 @@ function populateArray()
 }
 
 //Asynchronous BubbleSort function (Accepts await expressions)
-async function selectionSort() 
+function selectionSort() 
 {
     var divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" and 
     var tempArr;
+    var min;
 
     transitionSpeed = parseInt(document.getElementById("rngSpeed").value);
+
+    for (var i = 0; i < arrayLength; i ++)
+    {
+        
+        min = i;
+
+        for (var j = i + 1; j < arrayLength; j ++)
+        {
+            if (myArray[j] < myArray[min])
+                min = j;
+
+        }
+
+        if(min != i)
+        {
+            tempArr = myArray[i];
+            myArray[i] = myArray[min];
+            myArray[min] = tempArr;
+        }
+    }
+
+    alert(myArray);
   
-    //Scan through the array
+    /*//Scan through the array
     for (var i = 0; i < arrayLength; i ++)
     {
         for (var j = 0; j < arrayLength - i - 1; j ++)   
@@ -80,9 +103,7 @@ async function selectionSort()
 
         //Change the color of the last element to green decrementally 
         divBlocks[arrayLength - i - 1].style.backgroundColor = "green";
-    }
-
-    alert(myArray);
+    }*/
 }
 
 //Promise to swap the two elements
