@@ -79,6 +79,7 @@ async function selectionSort()
             divBlocks[min].style.backgroundColor = "green";
             divBlocks = document.querySelectorAll(".divElement");
 
+            //Swap arry elements
             tempArr = myArray[i];
             myArray[i] = myArray[min];
             myArray[min] = tempArr;
@@ -109,17 +110,13 @@ function swapDivs(div1, divMin)
             //Insert updated element after milliseconds waiting time
             setTimeout(() => 
             {
-                var tempDiv = document.createElement("div");
+                var tempDiv = document.createElement("div");   //Temporary node
                 div1.parentNode.insertBefore(tempDiv, div1);
 
-                // move obj1 to right before obj2
-                divMin.parentNode.insertBefore(div1, divMin);
-
-                // move obj2 to right before where obj1 used to be
-                tempDiv.parentNode.insertBefore(divMin, tempDiv);
-
-                // remove temporary marker node
-                tempDiv.parentNode.removeChild(tempDiv);
+                //Swapping
+                divMin.parentNode.insertBefore(div1, divMin);   //Move div1 to right before divMin
+                tempDiv.parentNode.insertBefore(divMin, tempDiv);   //Move divMin to right before where div1 used to be
+                tempDiv.parentNode.removeChild(tempDiv);   //Remove temporary marker node
                 
                 resolve();
             }, transitionSpeed);
