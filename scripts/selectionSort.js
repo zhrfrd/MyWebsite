@@ -56,11 +56,14 @@ async function selectionSort()
             divBlocks[min].style.backgroundColor = "red";
             divBlocks[j].style.backgroundColor = "red";
 
-            //var value1 = myArray[min];   //Get the value of the block label, save it as a number ad assign it to the variable
-            //var value2 = myArray[j];     //
-
-            await resetOriginalColor (divBlocks[j]);
-            //divBlocks = document.querySelectorAll(".divElement");
+            //Add delay ang re-change color
+            await new Promise((resolve) =>
+                setTimeout(() =>
+                {
+                    divBlocks[j].style.backgroundColor = "purple";
+                    resolve();
+                }, transitionSpeed)
+            );
 
             if (myArray[j] < myArray[min])
             {
@@ -86,23 +89,6 @@ async function selectionSort()
     }
 
     alert(myArray);
-}
-
-//Reset original color after checking 
-function resetOriginalColor(myDiv)
-{
-    return new Promise((resolve) =>
-    {
-        window.requestAnimationFrame(function() 
-        {
-            //Insert updated element after milliseconds waiting time
-            setTimeout(() => 
-            {
-                myDiv.style.backgroundColor = "purple";
-                resolve();
-            }, transitionSpeed);
-        });
-    });
 }
 
 //Promise to swap the two elements
