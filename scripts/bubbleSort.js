@@ -61,7 +61,7 @@ async function bubbleSort()
             //Compare the value of the two div blocks
             if (value1 > value2) 
             {
-                await swap(divBlocks[j], divBlocks[j + 1]);   //Await "stops" the normal execution flow to run the function (swap). await needs to return the Promise result
+                await swapDivsBubble(divBlocks[j], divBlocks[j + 1]);   //Await "stops" the normal execution flow to run the function (swap). await needs to return the Promise result
                 divBlocks = document.querySelectorAll(".divElement");   //Update divBlocks after swapping
             }
 
@@ -86,7 +86,7 @@ async function bubbleSort()
 }
 
 //Promise to swap the two elements
-function swap(div1, div2) 
+function swapDivsBubble(div1, div2) 
 {
     return new Promise((resolve) => 
     {

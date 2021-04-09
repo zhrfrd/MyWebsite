@@ -1,49 +1,114 @@
 var myArray = new Array();
+var containerBar = document.getElementById("containerBar");
 var arrayLength;
+var transitionSpeed;
 
 function populate()
 {
-    arrayLength = parseInt(document.getElementById("txtLength").value);
-    
-    //Populate array with ordered numbers
-    for (var c = 0; c < arrayLength; c++)
+    let widthContainerBars = 0;
+    document.getElementById("containerBar").innerHTML = '';
+
+    arrayLength = parseInt(document.getElementById("rngSize").value);
+
+    for (var i = 0; i < arrayLength; i++) 
     {
-        myArray [c] = c;
+        var value = Math.ceil(Math.random() * 100);   //Generate a random number from 1 to 100 inclusive
+        var arrayElementDiv = document.createElement("div");   //Create a div HTML element
+
+        myArray[i] = value;   //Populate array
+        arrayElementDiv.classList.add("divElement");   //Assign a class to the div HTML element
+  
+        //Create style to the div element
+        arrayElementDiv.style.height = `${value * 3}px`;   //Set height of the div
+        arrayElementDiv.style.transform = `translate(${i * 30}px)`;   //Set the position of the following div
+  
+        //Create the labels to show the value of the div
+        var arrayElementDivLabel = document.createElement("label");
+        arrayElementDivLabel.classList.add("divLabelStyle");
+        arrayElementDivLabel.textContent = value;
+
+        arrayElementDiv.appendChild(arrayElementDivLabel);   
+        containerBar.appendChild(arrayElementDiv);
+        document.getElementById("containerBar").appendChild(arrayElementDiv);
+
+        widthContainerBars += 30;
     }
 
-    myArray = myArray.sort(() => Math.random() - 0.5)   //Shuffle array elements
-    alert(myArray);
-    document.getElementById("txtUnsortedArray").value = myArray;   //Output
-    document.getElementById("bttBubbleSort").disabled = false;
+    document.getElementById("containerAllBars").style.width = widthContainerBars + "px";   //Update width of the containerAllBars
 }
 
-function insertionSort()
+async function insertionSort()
 {
-    var temp, countPrevious, tempCountActual, tempCountPrevious;
-    
-    for (countActual = 1; countActual < arrayLength; countActual ++)
+    var divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" 
+    var arrKey, j;
+
+    transitionSpeed = parseInt(document.getElementById("rngSpeed").value);
+
+    for (var i = 1; i < arrayLength; i++)
     {
-        countPrevious = countActual - 1;
-        if (myArray[countActual] < myArray[countPrevious])
-        {
-            //Temporary variable for storing the (changing) position of the counter
-            tempCountActual = countActual;
-            tempCountPrevious = countPrevious;
-            temp = myArray[tempCountActual];
+        arrKey = myArray[i];
+        j = i - 1;
 
-            //Keep swapping the numbers until the "actual" number has a lower number before it
-            while(myArray[tempCountActual] < myArray[tempCountPrevious])
+        divBlocks[i].style.backgroundColor = "red";
+        divBlocks[j].style.backgroundColor = "red";
+
+        //Add delay and re-change color
+        await new Promise((resolve) =>
+            setTimeout(() =>
             {
-                temp = myArray[tempCountActual];
-                myArray[tempCountActual] = myArray[tempCountPrevious];
-                myArray[tempCountPrevious] = temp;
+                divBlocks[i].style.backgroundColor = "purple";
+                divBlocks[j].style.backgroundColor = "purple";
+                resolve();
+            }, transitionSpeed)
+        );
 
-                //Update the temporaty counters
-                tempCountActual = tempCountPrevious;
-                tempCountPrevious --;
-            }
+        while ((j >= 0) && (myArray[j] > arrKey))
+        {
+            await swapDivsInsertion(divBlocks[j], divBlocks[j + 1]);
+            divBlocks[j].style.backgroundColor = "green";
+            divBlocks[j + 1].style.backgroundColor = "red";
+            
+            divBlocks = document.querySelectorAll(".divElement");
+
+            myArray[j + 1] = myArray[j];
+            j --;
         }
+
+        divBlocks[j + 1].style.backgroundColor = "green";
+        myArray[j + 1] = arrKey; 
     }
 
-    document.getElementById("txtSortedArray").value = myArray;
+    alert(myArray);
+}
+
+//Promise to swap the two elements
+function swapDivsInsertion(divMin, div1)
+{
+    return new Promise ((resolve) =>
+    {
+        //For exchanging styles of two divBlocks
+        var tempD;
+
+        //Swap between divs
+        tempD = div1.style.transform;
+        div1.style.transform = divMin.style.transform;
+        divMin.style.transform = tempD;
+
+        window.requestAnimationFrame(function() 
+        {
+            //Insert updated element after milliseconds waiting time
+            setTimeout(() => 
+            {
+                var tempDiv = document.createElement("div");   //Temporary node
+                div1.parentNode.insertBefore(tempDiv, div1);
+                
+                //Swapping
+                divMin.parentNode.insertBefore(div1, divMin);   //Move div1 to right before divMin
+                tempDiv.parentNode.insertBefore(divMin, tempDiv);   //Move divMin to right before where div1 used to be
+                tempDiv.parentNode.removeChild(tempDiv);   //Remove temporary marker node
+                
+                resolve();
+            }, transitionSpeed);
+        });
+    });
 }

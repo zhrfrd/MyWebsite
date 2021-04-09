@@ -1,6 +1,6 @@
 <?php 
     echo '
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to gt the "map-marker" icon" -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to the "map-marker" icon" -->
         <footer id="footer">
             <div class="footerContent">
                 <span class="footerText"><i style="font-size:24px" class="fa">&#xf041;</i> London</span>

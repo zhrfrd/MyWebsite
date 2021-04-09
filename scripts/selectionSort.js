@@ -75,7 +75,7 @@ async function selectionSort()
 
         if(min != i)
         {
-            await swapDivs(divBlocks[i], divBlocks[min]);
+            await swapDivsSelection(divBlocks[i], divBlocks[min]);
             divBlocks[min].style.backgroundColor = "green";
             divBlocks = document.querySelectorAll(".divElement");
 
@@ -93,7 +93,7 @@ async function selectionSort()
 }
 
 //Promise to swap the two elements
-function swapDivs(div1, divMin) 
+function swapDivsSelection(div1, divMin) 
 {
     return new Promise((resolve) => 
     {
