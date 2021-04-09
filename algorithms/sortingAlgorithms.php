@@ -14,7 +14,7 @@
     <main id="mainSorting">
         <div class="menuSorting">
             <div class="menuSortingInput"><label for="rngSize">Array size</label><input type="range" id="rngSize" min="1" max="50" value="25"><span id="spnSize"></span></div>
-            <div class="menuSortingInput"><label for="rngSpeed">Sorting speed</label><input type="range" id="rngSpeed" min="50" max="1000" value="500"><span id="spnSpeed"></span></div>
+            <div class="menuSortingInput"><label for="rngSpeed">Sorting speed</label><input type="range" id="rngSpeed" min="25" max="1000" value="500"><span id="spnSpeed"></span></div>
             <div class="menuSortingButton" onclick="selectionSort()">Selection sort</div>
             <div class="menuSortingButton" onclick="bubbleSort()">Bubble sort</div>
             <div class="menuSortingButton" onclick="insertionSort()">Insertion sort</div>
