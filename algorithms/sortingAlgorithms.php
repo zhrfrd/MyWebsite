@@ -18,7 +18,7 @@
             <div class="menuSortingButton" onclick="selectionSort()">Selection sort</div>
             <div class="menuSortingButton" onclick="bubbleSort()">Bubble sort</div>
             <div class="menuSortingButton" onclick="insertionSort()">Insertion sort</div>
-            <div class="menuSortingButton" onclick="">Merge sort</div>
+            <div class="menuSortingButton" onclick="calculateMergeSort()">Merge sort</div>
             <div class="menuSortingButton" onclick="">Quick sort</div>
         </div>
         <div id="containerAllBars">
@@ -31,6 +31,7 @@
     <script type="text/javascript" src="../scripts/selectionSort.js"></script> 
     <script type="text/javascript" src="../scripts/bubbleSort.js"></script>
     <script type="text/javascript" src="../scripts/insertionSort.js"></script>
+    <script type="text/javascript" src="../scripts/mergeSort.js"></script>
     <!--<script src="../scripts/script.js"></script>-->
     <script>
         changeNavActiveId();   //Change the id of the tab (inside the top navigation) relative the the actual page to "active" in order change the color through CSS

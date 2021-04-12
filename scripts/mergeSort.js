@@ -1,25 +1,46 @@
 var myArray = new Array();
+var containerBar = document.getElementById("containerBar");
 var arrayLength;
+var transitionSpeed;
 
 function populate()
 {
-    arrayLength = parseInt(document.getElementById("txtLength").value);
-    
-    //Populate array with ordered numbers
-    for (var c = 0; c < arrayLength; c++)
+    let widthContainerBars = 0;
+    document.getElementById("containerBar").innerHTML = '';
+
+    arrayLength = parseInt(document.getElementById("rngSize").value);
+
+    for (var i = 0; i < arrayLength; i++) 
     {
-        myArray [c] = c;
+        var value = Math.ceil(Math.random() * 100);   //Generate a random number from 1 to 100 inclusive
+        var arrayElementDiv = document.createElement("div");   //Create a div HTML element
+
+        myArray[i] = value;   //Populate array
+        arrayElementDiv.classList.add("divElement");   //Assign a class to the div HTML element
+  
+        //Create style to the div element
+        arrayElementDiv.style.height = `${value * 3}px`;   //Set height of the div
+        arrayElementDiv.style.transform = `translate(${i * 30}px)`;   //Set the position of the following div
+  
+        //Create the labels to show the value of the div
+        var arrayElementDivLabel = document.createElement("label");
+        arrayElementDivLabel.classList.add("divLabelStyle");
+        arrayElementDivLabel.textContent = value;
+
+        arrayElementDiv.appendChild(arrayElementDivLabel);   
+        containerBar.appendChild(arrayElementDiv);
+        document.getElementById("containerBar").appendChild(arrayElementDiv);
+
+        widthContainerBars += 30;
     }
 
-    myArray = myArray.sort(() => Math.random() - 0.5)   //Shuffle array elements
-    document.getElementById("txtUnsortedArray").value = myArray;   //Output
-    document.getElementById("bttMergeSort").disabled = false;
+    document.getElementById("containerAllBars").style.width = widthContainerBars + "px";   //Update width of the containerAllBars
 }
 
 function calculateMergeSort()
 {
     myArray = mergeSort (myArray);
-    document.getElementById("txtSortedArray").value = myArray;
+    alert(myArray);
 }
 
 function mergeSort(mainArray)
@@ -42,14 +63,18 @@ function mergeSort(mainArray)
 //Merge in order two arrays
 function merge(arrayLeft, arrayRight)
 {
+    var divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" 
+    transitionSpeed = parseInt(document.getElementById("rngSpeed").value);
     let arraySorted = new Array(arrayLeft.length + arrayRight.length);   //Create array with the size of the sum of the leftArray and rightArray
     let leftCount = rightCount = sortedCount = 0;   //Counters
 
     //Until the counter reach the end of both arrays (left and right)
     while((leftCount < arrayLeft.length) && (rightCount < arrayRight.length))
     {
+        divBlocks[leftCount].style.backgroundColor = "red";
+
         //If the element on the left array is smaller than the elemet on the right array increase the left counter
-        if (arrayLeft[leftCount] < arrayRight[rightCount])
+        if (arrayLeft[leftCount] <= arrayRight[rightCount])
         {
             arraySorted[sortedCount] = arrayLeft[leftCount];
             leftCount ++;
