@@ -40,15 +40,6 @@
     <?php include 'assets/footer.php' ?>   <!-- Footer of the page -->
 
     <!-- Javascript -->
-    <script>
-
-        changeNavActiveId();   //Change the id of the tab (inside the top navigation) relative the the actual page to "active" in order change the color through CSS
-
-        function changeNavActiveId() 
-        {
-            document.getElementById("algorithms").id = "active";
-        }
-
-    </script>
+    <script type="text/javascript" src="../scripts/searchBarCssUpdate.js"></script>
 </body>
 </html>

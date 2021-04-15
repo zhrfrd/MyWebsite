@@ -26,7 +26,7 @@
             <div class="contentItem">
                 <div tabindex="0" onclick="changeInfoContent('../images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '2')" onkeypress="changeInfoContent('../images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '2')"><h2 class="hTitle">Teacher Assistant (Computing) - Southwark College</h2></div>
                 <a href="https://www.southwark.ac.uk/" class="aUrl" target="blank" aria-label="Link to Southwark College website">https://www.southwark.ac.uk/</a>
-                <p class="pDescription">2019 to 2020 - During my final year at <em>University of Greenwich</em> I also got the position as <strong>Teacher Assistant</strong> for the <strong>Computing</strong> course.</p>
+                <p class="pDescription">2019 to 2020 - During my final year at <em>University of Greenwich</em> I've been assigned the position of <strong>Teacher Assistant</strong> for the <strong>Computing</strong> course.</p>
             </div>
         </section>
 
@@ -39,8 +39,8 @@
                 <p id="contentInfoSubtitle">Health Education and Improvement Wales (HEIW)</p>
             </div>
             <div id="contentInfoTextContainer">
-                <p>After following the Bachelor of Science programme in Computing, I graduated at <em>University of Greenwich</em> in June 2020 with <strong>First Class Honours</strong>. This course gave me solid foundations about <a href="">algorithms and modelling</a>, software development by using different <a href="">frameworks and platforms</a> and, also, database administration for the collection and manipulation of data.</p>
-                <p>Furthermore, as part of my programme, I had the opportunity to work as <a href="../myExperience.php">teacher assistant</a> for the Foundation year students in <a href="https://www.southwark.ac.uk/">Southwark College</a>.</p>
+                <p>In January 2021 I started working for <em>Health Education and Improvement Wales (HEIW)</em> as a <strong>Software Developer and Accessibility Officer</strong>.</p>
+                <p>The main duties that I have are developing applications and making sure that the content follows the accesibilities requiremets.</p>
             </div>
         </aside>
     </main>
@@ -71,12 +71,12 @@
             {
                 case "1":
                     document.getElementById("contentInfoImage").alt = "Logo of HEIW";
-                    document.getElementById("contentInfoTextContainer").innerHTML = '<p>After following the Bachelor of Science programme in Computing, I graduated at <em>University of Greenwich</em> in June 2020 with <strong>First Class Honours</strong>. This course gave me solid foundations about <a href="">algorithms and modelling</a>, software development by using different <a href="">frameworks and platforms</a> and, also, database administration for the collection and manipulation of data.</p><p>Furthermore, as part of my programme, I had the opportunity to work as <a href="../myExperience.php">teacher assistant</a> for the Foundation year students in <a href="https://www.southwark.ac.uk/">Southwark College</a>.</p>';
+                    document.getElementById("contentInfoTextContainer").innerHTML = '<p>In January 2021 I started working for <em>Health Education and Improvement Wales (HEIW)</em> as a <strong>Software Developer and Accessibility Officer</strong>.</p><p>The main duties that I have are developing applications and making sure that the content follows the accesibilities requiremets.</p>';
                     break;
 
                 case "2":
                     document.getElementById("contentInfoImage").alt = "Logo of Southwark College";
-                    document.getElementById("contentInfoTextContainer").innerHTML = '<p>After following the Foundation years in Business Information Technology at <em>University of Greenwich</em>, in June 2019 I graduated with <strong>Distinction</strong>. During the accademic years I learned how to use a multitude of <a href="../skills.php">programming languages</a> for the creation of different projects that allowed me, also, to understand the foundamentals of <a href="">data structures</a> and <a href="../projects.php">algorithms</a>.</p><p>In addition, I took some networking lessons which provided me the tools to understand and, also, configurate computer networks.</p>';
+                    document.getElementById("contentInfoTextContainer").innerHTML = '<p>During the ast year of unversity I fund a oition as <strong>Teacher Assistant</strong> for the <strong>Computing</strong> course. The main duties were delivering lectures for the Foundation year students and helping them during the development of their projects</p>';
                     break;
 
                 default:
