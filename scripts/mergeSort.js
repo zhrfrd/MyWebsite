@@ -8,8 +8,7 @@ function mergeSort()
 {
     sortedArray = mergeSortDivider (myArray);
     var divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" 
-    if(divBlocks[0].getElementsByClassName("divLabelStyle").textContent == "2")
-        alert("Yes");
+    alert(Number(divBlocks[5].childNodes[0].innerHTML));
     alert(sortedArray);
 }
 
