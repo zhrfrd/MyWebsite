@@ -1,21 +1,18 @@
 
 var sortedArray = new Array();
-
+var divBlocks;
 var transitionSpeed;
-
+var result;
+var tempArr = new Array();
 
 function mergeSort()
 {
-    sortedArray = mergeSortDivider (myArray);
-    var divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" 
-    alert(Number(divBlocks[5].childNodes[0].innerHTML));
-    alert(sortedArray);
+    sortedArray = divideArray (myArray);
+    divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" 
+    alert(sortedArray + " \n " + tempArr);
 }
 
-var leftElement = 0;
-var rightElement = 0;
-
-function mergeSortDivider(mainArray)
+function divideArray(mainArray)
 {
     //Case base (If the array size is 1 or minor)
     if(mainArray.length <= 1)
@@ -26,22 +23,25 @@ function mergeSortDivider(mainArray)
     let leftHalf = mainArray.slice(0, middle);   //Slice mainArray from the index 0 to middle and save it inside a new array called leftHalf
     let rightHalf = mainArray.slice(middle, mainArray.length);   //Slice mainArray from the index middle to mainArray.length and save it inside a new array called rightHalf
 
-    leftHalf = mergeSortDivider(leftHalf);   //Recursivelly call the mergeSortDivider() function and pass the left vector as parameter until the array size is 1
-    rightHalf = mergeSortDivider(rightHalf);   //Recursivelly call the mergeSortDivider() function and pass the right vector as parameter until the array size is 1
+    leftHalf = divideArray(leftHalf);   //Recursivelly call the mergeSortDivider() function and pass the left vector as parameter until the array size is 1
+    rightHalf = divideArray(rightHalf);   //Recursivelly call the mergeSortDivider() function and pass the right vector as parameter until the array size is 1
 
-    return merge(leftHalf, rightHalf, leftElement, rightElement);   //Call the merge() function to merge the arrays
+    result = mergeArrays(leftHalf, rightHalf);
+    return result;   //Call the merge() function to merge the arrays
 }
 
 //Merge in order two arrays
-function merge(arrayLeft, arrayRight, lElement, rElement)
+function mergeArrays(arrayLeft, arrayRight)
 {
     var divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" 
+    var tempDivBlocks = divBlocks;
     transitionSpeed = parseInt(document.getElementById("rngSpeed").value);
 
     //alert(lElement + " " + rElement);
 
     let arraySorted = new Array(arrayLeft.length + arrayRight.length);   //Create array with the size of the sum of the leftArray and rightArray
     let leftCount = rightCount = sortedCount = 0;   //Counters
+    var valArraySorted;
 
     //Until the counter reach the end of both arrays (left and right)
     while((leftCount < arrayLeft.length) && (rightCount < arrayRight.length))
@@ -60,6 +60,15 @@ function merge(arrayLeft, arrayRight, lElement, rElement)
             rightCount ++;
         }
 
+        valArraySorted = arraySorted[sortedCount];
+        tempArr[sortedCount] = arraySorted[sortedCount];
+
+        for (var c = 0; c < arraySorted.length; c ++)   //Scan through the sorted array and...
+        {
+            if (Number(divBlocks[c].childNodes[0].innerHTML) == valArraySorted)  //...Get the value of the corresponding divElement by comparing the arraySorted value with the label of the divElement
+                tempDivBlocks[sortedCount] = divBlocks[c];
+        }
+
         sortedCount ++;   //For each cycle, increase the counter for the arrySorted
     }
 
@@ -67,6 +76,7 @@ function merge(arrayLeft, arrayRight, lElement, rElement)
     while (leftCount < arrayLeft.length)
     {
         arraySorted[sortedCount] = arrayLeft[leftCount];
+
         leftCount ++;
         sortedCount ++;
     }
@@ -75,9 +85,41 @@ function merge(arrayLeft, arrayRight, lElement, rElement)
     while (rightCount < arrayRight.length)
     {
         arraySorted[sortedCount] = arrayRight[rightCount];
+
         rightCount ++;
         sortedCount ++;
     }
 
     return arraySorted;
+}
+
+function swapDivsSelection(div1, divMin) 
+{
+    return new Promise((resolve) => 
+    {
+        //For exchanging styles of two divBlocks
+        var tempD;
+
+        //Swap between divs
+        tempD = div1.style.transform;
+        div1.style.transform = divMin.style.transform;
+        divMin.style.transform = tempD;
+
+        window.requestAnimationFrame(function() 
+        {
+            //Insert updated element after milliseconds waiting time
+            setTimeout(() => 
+            {
+                var tempDiv = document.createElement("div");   //Temporary node
+                div1.parentNode.insertBefore(tempDiv, div1);
+
+                //Swapping
+                divMin.parentNode.insertBefore(div1, divMin);   //Move div1 to right before divMin
+                tempDiv.parentNode.insertBefore(divMin, tempDiv);   //Move divMin to right before where div1 used to be
+                tempDiv.parentNode.removeChild(tempDiv);   //Remove temporary marker node
+                
+                resolve();
+            }, transitionSpeed);
+        });
+    });
 }

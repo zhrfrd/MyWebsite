@@ -15,11 +15,11 @@
         <div class="menuSorting">
             <div class="menuSortingInput"><label for="rngSize">Array size</label><input type="range" id="rngSize" min="1" max="50" value="25"><span id="spnSize"></span></div>
             <div class="menuSortingInput"><label for="rngSpeed">Sorting speed</label><input type="range" id="rngSpeed" min="25" max="1000" value="500"><span id="spnSpeed"></span></div>
-            <div class="menuSortingButton" onclick="selectionSort()">Selection sort</div>
-            <div class="menuSortingButton" onclick="bubbleSort()">Bubble sort</div>
-            <div class="menuSortingButton" onclick="insertionSort()">Insertion sort</div>
-            <div class="menuSortingButton" onclick="mergeSort()">Merge sort</div>
-            <div class="menuSortingButton" onclick="">Quick sort</div>
+            <div class="menuSortingButton" onkeypress="selectionSort()" onclick="selectionSort()" tabindex="0" role="button">Selection sort</div>
+            <div class="menuSortingButton" onkeypress="bubbleSort()" onclick="bubbleSort()" tabindex="0" role="button">Bubble sort</div>
+            <div class="menuSortingButton" onkeypress="insertionSort()" onclick="insertionSort()" tabindex="0" role="button">Insertion sort</div>
+            <div class="menuSortingButton" onkeypress="mergeSort()" onclick="mergeSort()" tabindex="0" role="button">Merge sort</div>
+            <div class="menuSortingButton" onkeypress onclick="" tabindex="0" role="button">Quick sort</div>
         </div>
         <div id="containerAllBars">
             <div id="containerBar"></div>

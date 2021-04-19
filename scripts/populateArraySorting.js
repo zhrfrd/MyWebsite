@@ -11,7 +11,7 @@ function populateArray()
 
     for (var i = 0; i < arrayLength; i++) 
     {
-        var value = Math.ceil(Math.random() * 10);   //Generate a random number from 1 to 100 inclusive
+        var value = Math.ceil(Math.random() * 100);   //Generate a random number from 1 to 100 inclusive
         var arrayElementDiv = document.createElement("div");   //Create a div HTML element
 
         myArray[i] = value;   //Populate array
