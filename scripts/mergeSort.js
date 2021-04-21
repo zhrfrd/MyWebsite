@@ -8,7 +8,7 @@ var tempArr = new Array();
 function mergeSort()
 {
     sortedArray = divideArray (myArray);
-    divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" 
+    divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" -----> TO BE REMOVED
     alert(sortedArray + " \n " + tempArr);
 }
 
@@ -34,14 +34,13 @@ function divideArray(mainArray)
 function mergeArrays(arrayLeft, arrayRight)
 {
     var divBlocks = document.querySelectorAll(".divElement");   //Get all the elements in the document with class "divElement" 
-    var tempDivBlocks = divBlocks;
+    var tempDivBlocks = document.querySelectorAll(".tempDivElement");
     transitionSpeed = parseInt(document.getElementById("rngSpeed").value);
-
-    //alert(lElement + " " + rElement);
 
     let arraySorted = new Array(arrayLeft.length + arrayRight.length);   //Create array with the size of the sum of the leftArray and rightArray
     let leftCount = rightCount = sortedCount = 0;   //Counters
     var valArraySorted;
+    var tempDivCounter = 0;
 
     //Until the counter reach the end of both arrays (left and right)
     while((leftCount < arrayLeft.length) && (rightCount < arrayRight.length))
@@ -66,7 +65,17 @@ function mergeArrays(arrayLeft, arrayRight)
         for (var c = 0; c < arraySorted.length; c ++)   //Scan through the sorted array and...
         {
             if (Number(divBlocks[c].childNodes[0].innerHTML) == valArraySorted)  //...Get the value of the corresponding divElement by comparing the arraySorted value with the label of the divElement
-                tempDivBlocks[sortedCount] = divBlocks[c];
+            {
+                tempDivBlocks[tempDivCounter].style.background = "red";
+                tempDivBlocks[tempDivCounter].style.transform = divBlocks[c].style.transform;
+                divBlocks[tempDivCounter].style.background = tempDivBlocks[tempDivCounter].style.background;
+                divBlocks[tempDivCounter].style.transform = tempDivBlocks[tempDivCounter].style.transform;
+
+                tempDivCounter ++;
+                
+                divBlocks = document.querySelectorAll(".divElement");
+                //tempDivBlocks[sortedCount] = divBlocks[c];
+            }
         }
 
         sortedCount ++;   //For each cycle, increase the counter for the arrySorted
@@ -76,6 +85,7 @@ function mergeArrays(arrayLeft, arrayRight)
     while (leftCount < arrayLeft.length)
     {
         arraySorted[sortedCount] = arrayLeft[leftCount];
+        tempArr[sortedCount] = arraySorted[sortedCount];
 
         leftCount ++;
         sortedCount ++;
@@ -85,6 +95,7 @@ function mergeArrays(arrayLeft, arrayRight)
     while (rightCount < arrayRight.length)
     {
         arraySorted[sortedCount] = arrayRight[rightCount];
+        tempArr[sortedCount] = arraySorted[sortedCount];
 
         rightCount ++;
         sortedCount ++;

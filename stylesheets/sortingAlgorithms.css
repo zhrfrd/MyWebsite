@@ -47,17 +47,26 @@
 {
     height: 360px;
     position: relative;
-    /*background-color: grey;*/
 }
 
 #containerBar
 {
-    /*background-color: grey;*/
     height: 360px;
     position: relative;
 }
 
 .divElement 
+{
+    width: 28px;
+    background-color: purple;
+    position: absolute;
+    bottom: 0px;
+    margin: 1px;
+    transition: 0.2s;
+}
+
+/*Temporary div for Merge sort*/
+.tempDivElement 
 {
     width: 28px;
     background-color: purple;

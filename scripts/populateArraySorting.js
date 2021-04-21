@@ -13,9 +13,11 @@ function populateArray()
     {
         var value = Math.ceil(Math.random() * 100);   //Generate a random number from 1 to 100 inclusive
         var arrayElementDiv = document.createElement("div");   //Create a div HTML element
+        var tempArrayElementDiv = document.createElement("div");   //Create temporary div Element (For Mergesort...)
 
         myArray[i] = value;   //Populate array
         arrayElementDiv.classList.add("divElement");   //Assign a class to the div HTML element
+        tempArrayElementDiv.classList.add("tempDivElement");   //Assign a class to the temporary div HTML element (For Mergesort...)
   
         //Create style to the div element
         arrayElementDiv.style.height = `${value * 3}px`;   //Set height of the div
@@ -29,6 +31,9 @@ function populateArray()
         arrayElementDiv.appendChild(arrayElementDivLabel);   
         containerBar.appendChild(arrayElementDiv);
         document.getElementById("containerBar").appendChild(arrayElementDiv);
+        //Add Temporary elements to the container (For Mergesort)
+        containerBar.appendChild(tempArrayElementDiv);
+        document.getElementById("containerBar").appendChild(tempArrayElementDiv);
 
         widthContainerBars += 30;
     }
