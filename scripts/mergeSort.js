@@ -68,18 +68,20 @@ function mergeArrays(arrayLeft, arrayRight)
             {
                 tempDivBlocks[tempDivCounter].style.background = "red";
                 tempDivBlocks[tempDivCounter].style.transform = divBlocks[c].style.transform;
-                divBlocks[tempDivCounter].style.background = tempDivBlocks[tempDivCounter].style.background;
-                divBlocks[tempDivCounter].style.transform = tempDivBlocks[tempDivCounter].style.transform;
+                // divBlocks[tempDivCounter].style.background = tempDivBlocks[tempDivCounter].style.background;
+                // divBlocks[tempDivCounter].style.transform = tempDivBlocks[tempDivCounter].style.transforms;
 
                 tempDivCounter ++;
                 
-                divBlocks = document.querySelectorAll(".divElement");
+                tempDivBlocks = document.querySelectorAll(".tempDivElement");
                 //tempDivBlocks[sortedCount] = divBlocks[c];
             }
         }
 
         sortedCount ++;   //For each cycle, increase the counter for the arrySorted
     }
+
+    
 
     //Similar cycle to the previous one but only if the right array has been completely checked
     while (leftCount < arrayLeft.length)
@@ -100,6 +102,16 @@ function mergeArrays(arrayLeft, arrayRight)
         rightCount ++;
         sortedCount ++;
     }
+
+    for (var c = 0; c < arraySorted.length; c++)
+    {
+        divBlocks[c].style.background = tempDivBlocks[c].style.background;
+        divBlocks[c].style.transform = tempDivBlocks[c].style.transform;
+
+        
+    }
+
+    divBlocks = document.querySelectorAll(".divElement");
 
     return arraySorted;
 }
