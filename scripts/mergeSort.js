@@ -5,6 +5,9 @@ var transitionSpeed;
 var result;
 var tempArr = new Array();
 
+// var tempDivCounter = 0;
+// var sortedCount = 0;
+
 function mergeSort()
 {
     sortedArray = divideArray (myArray);
@@ -30,6 +33,11 @@ function divideArray(mainArray)
     return result;   //Call the merge() function to merge the arrays
 }
 
+var tempDivCounter = 0;
+var i = 0;
+var j = 0;
+var k = 0;
+
 //Merge in order two arrays
 function mergeArrays(arrayLeft, arrayRight)
 {
@@ -38,9 +46,9 @@ function mergeArrays(arrayLeft, arrayRight)
     transitionSpeed = parseInt(document.getElementById("rngSpeed").value);
 
     let arraySorted = new Array(arrayLeft.length + arrayRight.length);   //Create array with the size of the sum of the leftArray and rightArray
-    let leftCount = rightCount = sortedCount = 0;   //Counters
+    let leftCount = rightCount = 0;   //Counters
     var valArraySorted;
-    var tempDivCounter = 0;
+    var sortedCount = 0;
 
     //Until the counter reach the end of both arrays (left and right)
     while((leftCount < arrayLeft.length) && (rightCount < arrayRight.length))
@@ -62,26 +70,32 @@ function mergeArrays(arrayLeft, arrayRight)
         valArraySorted = arraySorted[sortedCount];
         tempArr[sortedCount] = arraySorted[sortedCount];
 
-        for (var c = 0; c < arraySorted.length; c ++)   //Scan through the sorted array and...
+        while (i < arraySorted.length)   //Scan through the sorted array...
         {
-            if (Number(divBlocks[c].childNodes[0].innerHTML) == valArraySorted)  //...Get the value of the corresponding divElement by comparing the arraySorted value with the label of the divElement
+            while (j < arraySorted.length)   //...Scan through the bars...
             {
-                tempDivBlocks[tempDivCounter].style.background = "red";
-                tempDivBlocks[tempDivCounter].style.transform = divBlocks[c].style.transform;
-                // divBlocks[tempDivCounter].style.background = tempDivBlocks[tempDivCounter].style.background;
-                // divBlocks[tempDivCounter].style.transform = tempDivBlocks[tempDivCounter].style.transforms;
+                if (Number(divBlocks[j].childNodes[0].innerHTML) == arraySorted[i])  //...Get the value of the corresponding divElement by comparing the arraySorted value with the label of the divElement
+                {
+                    tempDivBlocks[tempDivCounter].style.background = "red";
+                    tempDivBlocks[tempDivCounter].style.transform = divBlocks[j].style.transform;
+                    // divBlocks[tempDivCounter].style.background = tempDivBlocks[tempDivCounter].style.background;
+                    // divBlocks[tempDivCounter].style.transform = tempDivBlocks[tempDivCounter].style.transforms;
+                    
+                    tempDivCounter ++;
+                    //tempDivBlocks[sortedCount] = divBlocks[c];
+                }
 
-                tempDivCounter ++;
-                
-                tempDivBlocks = document.querySelectorAll(".tempDivElement");
-                //tempDivBlocks[sortedCount] = divBlocks[c];
+                j ++;
             }
+
+            i ++;
         }
+        
+        tempDivBlocks = document.querySelectorAll(".tempDivElement");
+        divBlocks = document.querySelectorAll(".divElement");
 
         sortedCount ++;   //For each cycle, increase the counter for the arrySorted
     }
-
-    
 
     //Similar cycle to the previous one but only if the right array has been completely checked
     while (leftCount < arrayLeft.length)
@@ -103,12 +117,12 @@ function mergeArrays(arrayLeft, arrayRight)
         sortedCount ++;
     }
 
-    for (var c = 0; c < arraySorted.length; c++)
+    while (k < arraySorted.length)
     {
-        divBlocks[c].style.background = tempDivBlocks[c].style.background;
-        divBlocks[c].style.transform = tempDivBlocks[c].style.transform;
-
+        divBlocks[k].style.background = tempDivBlocks[k].style.background;
+        divBlocks[k].style.transform = tempDivBlocks[k].style.transform;
         
+        k++
     }
 
     divBlocks = document.querySelectorAll(".divElement");
