@@ -75,7 +75,19 @@
     margin: 1px;
     transition: 0.2s;
 }
-  
+
+/*-----------TEST--------*/
+/* .tempDivLabelStyle
+{
+    position: absolute;
+    color: black;
+    margin-top: -20px;   /*Position on top of bar 20px*/
+    /* width: 100%;
+    text-align: center;
+} */
+/*-------------------*/
+
+
 .divLabelStyle
 {
     position: absolute;

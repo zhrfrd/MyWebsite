@@ -73,7 +73,7 @@ function mergeArrays(arrayLeft, arrayRight)
                 {
                     tempDivBlocks[tempDivCounter].style.background = "red";
                     tempDivBlocks[tempDivCounter].style.transform = divBlocks[j].style.transform;
-                    alert(tempDivCounter);
+                    
                     tempDivCounter ++;
                 }
 
@@ -114,6 +114,13 @@ function mergeArrays(arrayLeft, arrayRight)
         k++
     }
 
+    var ttt = new Array();
+
+    for (var f = 0; f < arraySorted.length; f ++)
+    {
+        ttt[f] = divBlocks[f].childNodes[0].innerHTML;
+    }
+    alert(ttt);
     //divBlocks = document.querySelectorAll(".divElement");
 
     return arraySorted;

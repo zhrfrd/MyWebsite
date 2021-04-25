@@ -26,7 +26,15 @@ function populateArray()
         //Create style to the div element
         //tempArrayElementDiv.style.height = `${value * 3}px`;   //Set height of the div
         tempArrayElementDiv.style.transform = `translate(${i * 30}px)`;   //Set the position of the following div
-  
+
+        // //-----------TEST------------------
+        // var arrayTempElementDivLabel = document.createElement("label");
+        // arrayTempElementDivLabel.classList.add("tempDivLabelStyle");
+        // arrayTempElementDivLabel.textContent = value;
+
+        //  tempArrayElementDiv.appendChild(arrayTempElementDivLabel); 
+        // //-----------------------------------
+
         //Create the labels to show the value of the div
         var arrayElementDivLabel = document.createElement("label");
         arrayElementDivLabel.classList.add("divLabelStyle");
