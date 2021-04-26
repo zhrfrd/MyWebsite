@@ -9,17 +9,16 @@
     <script type="text/javascript" src="../scripts/dropdownMenu.js"></script> 
 </head>
 <body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main" class="skipLink">Skip to main content</a>
 
     <!-- HEADER -->
-
     <?php include 'assets/header.php' ?>
 
     <!-- NAVIGATION BAR -->
-
     <?php include 'assets/navigation.php' ?>
 
     <!-- MAIN CONTENT -->
-
     <main id="main">
         <div id="cotentList">
         </div>
@@ -28,7 +27,6 @@
     </main>
 
     <!-- FOOTER -->
-
     <?php include 'assets/footer.php' ?>
 
     <!-- Javascript -->

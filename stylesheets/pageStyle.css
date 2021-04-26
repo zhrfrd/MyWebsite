@@ -11,6 +11,23 @@ body
     position: relative;
 }
 
+/*--------------------------------------SKIP LINK------------------------------------------*/
+.skipLink
+{
+    position: absolute;
+    top: -40px;   /*Hide it outside the page*/
+    left: 0;
+    background: #BF1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skipLink:focus
+{
+    top: 0;   /*Show it*/
+}
+
 /*---------------------------------------HEADER--------------------------------------------*/
 
 #header
