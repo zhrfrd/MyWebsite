@@ -94,7 +94,7 @@
             document.getElementById("contentInfoTitle").textContent = infoTitle;
             document.getElementById("contentInfoSubtitle").textContent = infoSubtitle;
 
-            document.querySelector("h3").focus();   //Focus to the header of ifo content (Accessibility)
+            document.querySelector("h3").focus();   //Focus to the header of info content (Accessibility)
 
             switch (infoSection)
             {

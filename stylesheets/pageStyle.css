@@ -313,6 +313,17 @@ body
     text-decoration: none;
 }
 
+.skillsList
+{
+    padding: 6px;
+}
+
+/*Rating stars*/
+.checked
+{
+    color: orange;
+}
+
 /*---------------------------------------FOOTER--------------------------------------------*/
 
 #footer
