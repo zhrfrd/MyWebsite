@@ -2,7 +2,6 @@
 var sortedArray = new Array();
 var transitionSpeed;
 var result;
-var tempArr = new Array();
 
 var i = j = k = 0;
 // var tempDivBlocks = document.querySelectorAll(".tempDivElement");
@@ -39,13 +38,13 @@ function mergeArrays(arrayLeft, arrayRight)
     var tempDivBlocks = document.querySelectorAll(".tempDivElement");
     transitionSpeed = parseInt(document.getElementById("rngSpeed").value);
 
-    let arraySorted = new Array(arrayLeft.length + arrayRight.length);   //Create array with the size of the sum of the leftArray and rightArray
+    let arraySorted = new Array();   //Create array with the size of the sum of the leftArray and rightArray
     let leftCount = rightCount = 0;   //Counters
     var sortedCount = 0;//
     var tempDivCounter = 0;
     
     // alert(arrayLeft.length + " " + arrayRight.length);
-
+    
     //Until the counter reach the end of both arrays (left and right)
     while((leftCount < arrayLeft.length) && (rightCount < arrayRight.length))
     {
@@ -63,25 +62,27 @@ function mergeArrays(arrayLeft, arrayRight)
             rightCount ++;
         }
 
-        tempArr[sortedCount] = arraySorted[sortedCount];
+        //alert(arraySorted);
 
-        while (i < arraySorted.length)   //Scan through the sorted array...
-        {
-            while (j < arraySorted.length)   //...Scan through the bars...
-            {
-                if (Number(divBlocks[j].childNodes[0].innerHTML) == arraySorted[i])  //...Get the value of the corresponding divElement by comparing the arraySorted value with the label of the divElement
-                {
-                    tempDivBlocks[tempDivCounter].style.background = "red";
-                    tempDivBlocks[tempDivCounter].style.transform = divBlocks[j].style.transform;
+        // while (i < arraySorted.length)   //Scan through the sorted array...
+        // {
+        //     while (j < arraySorted.length)   //...Scan through the bars...
+        //     {
+        //         //alert(arraySorted.length + " " + arraySorted[i] + " " + arraySorted[j]);
+
+        //         if (Number(divBlocks[j].childNodes[0].innerHTML) == arraySorted[i])  //...Get the value of the corresponding divElement by comparing the arraySorted value with the label of the divElement
+        //         {
+        //             tempDivBlocks[tempDivCounter].style.background = "red";
+        //             tempDivBlocks[tempDivCounter].style.transform = divBlocks[j].style.transform;
                     
-                    tempDivCounter ++;
-                }
+        //             tempDivCounter ++;
+        //         }
 
-                j ++;
-            }
+        //         j ++;
+        //     }
 
-            i ++;
-        }
+        //     i ++;
+        // }
 
         sortedCount ++;   //For each cycle, increase the counter for the arrySorted
     }
@@ -90,7 +91,6 @@ function mergeArrays(arrayLeft, arrayRight)
     while (leftCount < arrayLeft.length)
     {
         arraySorted[sortedCount] = arrayLeft[leftCount];
-        tempArr[sortedCount] = arraySorted[sortedCount];
 
         leftCount ++;
         sortedCount ++;
@@ -100,10 +100,31 @@ function mergeArrays(arrayLeft, arrayRight)
     while (rightCount < arrayRight.length)
     {
         arraySorted[sortedCount] = arrayRight[rightCount];
-        tempArr[sortedCount] = arraySorted[sortedCount];
 
         rightCount ++;
         sortedCount ++;
+    }
+
+    while (i < arraySorted.length)   //Scan through the sorted array...
+    {
+        j = 0;
+
+        while (j < arraySorted.length)   //...Scan through the bars...
+        {
+            //alert(arraySorted.length + " " + arraySorted[i] + " " + arraySorted[j]);
+
+            if (Number(divBlocks[j].childNodes[0].innerHTML) == arraySorted[i])  //...Get the value of the corresponding divElement by comparing the arraySorted value with the label of the divElement
+            {
+                tempDivBlocks[tempDivCounter].style.background = "red";
+                tempDivBlocks[tempDivCounter].style.transform = divBlocks[j].style.transform;
+                
+                tempDivCounter ++;
+            }
+
+            j ++;
+        }
+
+        i ++;
     }
 
     while (k < arraySorted.length)
@@ -113,6 +134,8 @@ function mergeArrays(arrayLeft, arrayRight)
         
         k++
     }
+    
+    //sortedCount = 0;
 
     var ttt = new Array();
 
@@ -120,11 +143,36 @@ function mergeArrays(arrayLeft, arrayRight)
     {
         ttt[f] = divBlocks[f].childNodes[0].innerHTML;
     }
-    alert(ttt);
+    //alert(ttt);
     //divBlocks = document.querySelectorAll(".divElement");
 
     return arraySorted;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function swapDivsSelection(div1, divMin) 
 {
