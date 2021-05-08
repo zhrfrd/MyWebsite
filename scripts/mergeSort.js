@@ -64,26 +64,6 @@ function mergeArrays(arrayLeft, arrayRight)
 
         //alert(arraySorted);
 
-        // while (i < arraySorted.length)   //Scan through the sorted array...
-        // {
-        //     while (j < arraySorted.length)   //...Scan through the bars...
-        //     {
-        //         //alert(arraySorted.length + " " + arraySorted[i] + " " + arraySorted[j]);
-
-        //         if (Number(divBlocks[j].childNodes[0].innerHTML) == arraySorted[i])  //...Get the value of the corresponding divElement by comparing the arraySorted value with the label of the divElement
-        //         {
-        //             tempDivBlocks[tempDivCounter].style.background = "red";
-        //             tempDivBlocks[tempDivCounter].style.transform = divBlocks[j].style.transform;
-                    
-        //             tempDivCounter ++;
-        //         }
-
-        //         j ++;
-        //     }
-
-        //     i ++;
-        // }
-
         sortedCount ++;   //For each cycle, increase the counter for the arrySorted
     }
 
@@ -104,6 +84,8 @@ function mergeArrays(arrayLeft, arrayRight)
         rightCount ++;
         sortedCount ++;
     }
+    
+    //alert(arraySorted);
 
     while (i < arraySorted.length)   //Scan through the sorted array...
     {
