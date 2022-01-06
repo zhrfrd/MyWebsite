@@ -4,7 +4,6 @@ Website information
 
 ## How to run the website locally 
 
-In order to run the website locally you need to create a local server in php:
 * Open the command prompt
 * Access the project folder (cd /folderPath)
 * Run the command "php -S localhost:4000" without quotation marks
