@@ -13,10 +13,34 @@
     <a href="#main" class="skipLink">Skip to main content</a>
     
     <!-- HEADER -->
-    <?php include 'assets/header.php' ?>
+    <header id="header">
+        <div id="headerContainerLeft">
+            <a href="index.html" class="headerItem"><img src="images/faridLogo.png" alt="Farid logo"></a>
+            <div id="searchBar" class="headerItem">
+                <h1 id="searchBarText"></h1>
+                <div id="searchBarIconContainer"><img src="images/searchIcon.png" alt="Magnifier icon" id="searchBarIcon"></div>
+            </div>
+        </div>
+        <div id="headerContainerRight">
+            <div class="menuBlock" role="button" tabindex="0" aria-pressed="false" aria-label="Dropdown menu for my social networks" onkeypress="openDropdown()" onclick="openDropdown()">
+                <img src="images/gridIcon.png" class="menuIcon navItem" alt="My social network icon">
+                <div id="dropDownMenu" class="menuContainer">
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank"><img class="menuImage" src="images/linkedinLogo.png" alt="Farid logo" style="height: 40px;"></a><p class="menuImageP">LinkedIn</p></div>
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://github.com/zhrfrd" target="blank"><img class="menuImage" src="images/githubLogo.png" alt="Github logo" style="height: 40px;"></a><p class="menuImageP">GitHub</p></div>
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href=""><img class="menuImage" src="images/gmailLogo.png" alt="Gmail logo" style="height: 40px;"></a><p class="menuImageP">Gmail</p></div>
+                </div>
+            </div>
+            <a href="contactMe.html" id="contactMeLink" class="headerItem"><div id="contactMeButton">Contact me</div></a>
+        </div>
+    </header>
 
     <!-- NAVIGATION BAR -->
-    <?php include 'assets/navigation.php' ?>
+    <nav id="nav">
+        <a href="myEducation.html" class="navItem"  id="myEducation">My Education</a>
+        <a href="myExperience.html" class="navItem" id="myExperience">Work Experiences</a>
+        <a href="skills.html" class="navItem" id="skills">Skills</a>
+        <a href="projects.html" class="navItem" id="projects">Projects</a>
+    </nav>
 
     <!-- MAIN CONTENT -->
     <main id="main">
@@ -49,7 +73,18 @@
     </main>
 
     <!-- FOOTER -->
-    <?php include 'assets/footer.html' ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to the "map-marker" icon" -->
+    <footer id="footer">
+        <div class="footerContent">
+            <span class="footerText"><i style="font-size:24px" class="fa">&#xf041;</i> London</span>
+        </div>
+        <div class="footerContent">
+            <span class="footerText">Farid Zouheir</span>
+        </div>
+        <div class="footerContent">
+            <span class="footerText"><a href="" class="footerLink">Italian</a></span>
+        </div>
+    </footer>
 
     <!-- Javascript -->
     <script>
