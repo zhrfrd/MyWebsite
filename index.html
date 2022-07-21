@@ -58,7 +58,7 @@
             {
                 document.getElementById("pTextPresentation").textContent += textPresentation[arrCount].charAt(i);
                 i++;
-                setTimeout(writingAnimation, 50);
+                setTimeout(writingAnimation, 30);
             }
 
             else if ((i >= textPresentation[arrCount].length) && (arrCount != 6))
@@ -75,7 +75,7 @@
                 textPresentation[arrCount] = textPresentation[arrCount].substring(0, i);   //Remove last character from the string
                 document.getElementById('pTextPresentation').textContent = textPresentation[arrCount];
                 i --;
-                setTimeout(deletingAnimation, 50);
+                setTimeout(deletingAnimation, 30);
 		    }
 
             else
