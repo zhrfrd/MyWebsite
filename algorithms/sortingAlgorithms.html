@@ -7,10 +7,40 @@
     <title>Sorting algorithms visualization </title>
     <link rel="stylesheet" href="../stylesheets/pageStyle.css">
     <link rel="stylesheet" href="../stylesheets/sortingAlgorithms.css">
+    <script type="text/javascript" src="../scripts/dropdownMenu.js"></script> 
 </head>
 <body>
-    <?php include '../assets/header.php' ?>   <!-- Header of the page -->
-    <?php include '../assets/navigation.php' ?>   <!-- Top navigtion menu -->
+    <!-- HEADER -->
+    <header id="header">
+        <div id="headerContainerLeft">
+            <a href="index.html" class="headerItem"><img src="../images/faridLogo.png" alt="Farid logo"></a>
+            <div id="searchBar" class="headerItem">
+                <h1 id="searchBarText"></h1>
+                <div id="searchBarIconContainer"><img src="../images/searchIcon.png" alt="Magnifier icon" id="searchBarIcon"></div>
+            </div>
+        </div>
+        <div id="headerContainerRight">
+            <div class="menuBlock" role="button" tabindex="0" aria-pressed="false" aria-label="Dropdown menu for my social networks" onkeypress="openDropdown()" onclick="openDropdown()">
+                <img src="../images/gridIcon.png" class="menuIcon navItem" alt="My social network icon">
+                <div id="dropDownMenu" class="menuContainer">
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank"><img class="menuImage" src="../images/linkedinLogo.png" alt="Farid logo" style="height: 40px;"></a><p class="menuImageP">LinkedIn</p></div>
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://github.com/zhrfrd" target="blank"><img class="menuImage" src="../images/githubLogo.png" alt="Github logo" style="height: 40px;"></a><p class="menuImageP">GitHub</p></div>
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href=""><img class="menuImage" src="../images/gmailLogo.png" alt="Gmail logo" style="height: 40px;"></a><p class="menuImageP">Gmail</p></div>
+                </div>
+            </div>
+            <a href="../contactMe.html" id="contactMeLink" class="headerItem"><div id="contactMeButton">Contact me</div></a>
+        </div>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="nav">
+        <a href="../myEducation.html" class="navItem"  id="myEducation">My Education</a>
+        <a href="../myExperience.html" class="navItem" id="myExperience">Work Experiences</a>
+        <a href="../skills.html" class="navItem" id="skills">Skills</a>
+        <a href="../projects.html" class="navItem" id="projects">Projects</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
     <main id="mainSorting">
         <div class="menuSorting">
             <div class="menuSortingInput"><label for="rngSize">Array size</label><input type="range" id="rngSize" min="1" max="50" value="25"><span id="spnSize"></span></div>
@@ -18,21 +48,31 @@
             <div class="menuSortingButton" onkeypress="selectionSort()" onclick="selectionSort()" tabindex="0" role="button">Selection sort</div>
             <div class="menuSortingButton" onkeypress="bubbleSort()" onclick="bubbleSort()" tabindex="0" role="button">Bubble sort</div>
             <div class="menuSortingButton" onkeypress="insertionSort()" onclick="insertionSort()" tabindex="0" role="button">Insertion sort</div>
-            <div class="menuSortingButton" onkeypress="mergeSort()" onclick="mergeSort()" tabindex="0" role="button">Merge sort</div>
-            <div class="menuSortingButton" onkeypress onclick="" tabindex="0" role="button">Quick sort</div>
         </div>
         <div id="containerAllBars">
             <div id="containerBar"></div>
         </div>
     </main>
-    <?php include '../assets/footer.php' ?>   <!-- Footer of the page -->
+
+    <!-- FOOTER -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to the "map-marker" icon" -->
+    <footer id="footer">
+        <div class="footerContent">
+            <span class="footerText"><i style="font-size:24px" class="fa">&#xf041;</i> London</span>
+        </div>
+        <div class="footerContent">
+            <span class="footerText">Farid Zouheir</span>
+        </div>
+        <div class="footerContent">
+            <span class="footerText"><a href="" class="footerLink">Italian</a></span>
+        </div>
+    </footer>
 
     <!-- Javascript -->
     <script type="text/javascript" src="../scripts/populateArraySorting.js"></script>
     <script type="text/javascript" src="../scripts/selectionSort.js"></script> 
     <script type="text/javascript" src="../scripts/bubbleSort.js"></script>
     <script type="text/javascript" src="../scripts/insertionSort.js"></script>
-    <script type="text/javascript" src="../scripts/mergeSort.js"></script>
     <script type="text/javascript" src="../scripts/arrangeArraySorting.js"></script>
 
     <script>

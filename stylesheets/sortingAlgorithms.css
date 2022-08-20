@@ -1,7 +1,7 @@
 #mainSorting
 {
     width: 100%;
-    background-color: aqua;
+    background-color: beige;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +17,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .menuSortingInput
