@@ -1,7 +1,6 @@
 #mainSorting
 {
     width: 100%;
-    background-color: beige;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +10,6 @@
 .menuSorting
 {
     width: 100%;
-    background-color: beige;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -22,7 +20,7 @@
 
 .menuSortingInput
 {
-    background-color: coral;
+    background-color: #64F028;
     padding: 15px;
     border: 1px solid black;
     cursor: pointer;
@@ -34,7 +32,7 @@
 
 .menuSortingButton
 {
-    background-color: coral;
+    background-color: #64F028;
     padding: 15px;
     border: 1px solid black;
     cursor: pointer;
@@ -59,7 +57,7 @@
 .divElement 
 {
     width: 28px;
-    background-color: purple;
+    background-color: #166DDF;
     position: absolute;
     bottom: 0px;
     margin: 1px;
@@ -70,7 +68,7 @@
 .tempDivElement 
 {
     width: 28px;
-    background-color: purple;
+    background-color: #166DDF;
     position: absolute;
     bottom: 0px;
     margin: 1px;
