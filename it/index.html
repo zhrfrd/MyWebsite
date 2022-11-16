@@ -5,39 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
-    <link rel="stylesheet" href="stylesheets/homepageStyle.css">
-    <script type="text/javascript" src="scripts/typyingAnimation.js"></script> 
+    <link rel="stylesheet" href="../stylesheets/homepageStyle.css">
+    <script type="text/javascript" src="../scripts/typyingAnimation.js"></script> 
 </head>
 <body>
 
     <!-- NAVIGATION BAR -->
 
     <nav id="nav">
-        <a href="skills.html" class="navLink navItem">Skills</a>
-        <a href="projects.html" class="navLink navItem">Projects</a>
+    <a href="skills.html" class="navLink navItem">Abilità</a>
+        <a href="projects.html" class="navLink navItem">Progetti</a>
         <div class="menuBlock" role="button" tabindex="0" aria-pressed="false" aria-label="Dropdown menu for my social networks" onkeypress="openDropdown()" onclick="openDropdown()">
-            <img src="images/gridIcon.png" class="menuIcon navItem" alt="My social network icon">
+            <img src="../images/gridIcon.png" class="menuIcon navItem" alt="My social network icon">
             <div id="dropDownMenu" class="menuContainer">
-                <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank"><img class="menuImage" src="images/linkedinLogo.png" alt="Farid logo" style="height: 40px;"></a><p class="menuImageP">LinkedIn</p></div>
-                <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://github.com/zhrfrd" target="blank"><img class="menuImage" src="images/githubLogo.png" alt="Github logo" style="height: 40px;"></a><p class="menuImageP">GitHub</p></div>
-                <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="mailto:zouheirjob@hotmail.com"><img class="menuImage" src="images/outlookLogo.png" alt="Outlook logo" style="height: 40px;"></a><p class="menuImageP">Outlook</p></div>
+                <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank"><img class="menuImage" src="../images/linkedinLogo.png" alt="Farid logo" style="height: 40px;"></a><p class="menuImageP">LinkedIn</p></div>
+                <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://github.com/zhrfrd" target="blank"><img class="menuImage" src="../images/githubLogo.png" alt="Github logo" style="height: 40px;"></a><p class="menuImageP">GitHub</p></div>
+                <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="mailto:zouheirjob@hotmail.com"><img class="menuImage" src="../images/outlookLogo.png" alt="Outlook logo" style="height: 40px;"></a><p class="menuImageP">Outlook</p></div>
             </div>
         </div>
-        <a href="contactMe.html" id="contactMeLink" class="navItem"><div id="bttContactMe">Contact me</div></a>
+        <a href="contactMe.html" id="contactMeLink" class="navItem"><div id="bttContactMe">Contatti</div></a>
     </nav>
 
     <!-- MAIN CONTENT -->
 
     <main id="main">
         <div id="logoFarid" style="font-family: 'Open Sans';">
-            <img src="images/homepageLogo.jpg" alt="Farid Zouheir logo">
+            <img src="../images/homepageLogo.jpg" alt="Farid Zouheir logo">
         </div>
         <div id="searchBar">
             <p id="pTextPresentation"></p>
         </div>
         <div class="buttonsContainer">
-            <a href="myEducation.html" class="searchLink"><div class="buttonSearchBar">My Education</div></a>
-            <a href="myExperience.html" class="searchLink"><div class="buttonSearchBar">Work Experiences</div></a>
+            <a href="myEducation.html" class="searchLink"><div class="buttonSearchBar">Educazione</div></a>
+            <a href="myExperience.html" class="searchLink"><div class="buttonSearchBar">Esperienze</div></a>
         </div>
     </main>
 
@@ -46,13 +46,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to the "map-marker" icon" -->
     <footer id="footer">
         <div class="footerContent">
-            <span class="footerText"><i style="font-size:24px" class="fa">&#xf041;</i> London</span>
+            <span class="footerText"><i style="font-size:24px" class="fa">&#xf041;</i> Londra</span>
         </div>
         <div class="footerContent">
             <span class="footerText">Farid Zouheir</span>
         </div>
         <div class="footerContent">
-            <span class="footerText"><a href="./it/index.html" target="blank" class="footerLink">Italian</a></span>
+            <span class="footerText"><a href="../index.html" target="blank" class="footerLink">English</a></span>
         </div>
     </footer>
 
@@ -60,7 +60,7 @@
     <script>
         var i = 0;
         var arrCount = 0;
-        var textPresentation = ["Pleasure to meet you!", "My name is Farid Zouheir", "And I am a Software Developer", "With a big passion for technology.", "Do you like dynamic and curious people in your team?", "Then, drop me a message at any time!", "Farid Zouheir | Software Developer"];
+        var textPresentation = ["Piacere di conoscerti", "Mi chiamo Farid Zouheir", "E sono uno sviluppatore software", "Con una grande passione per i computer e tecnologia.", "Ti serve una persona curiosa e dinamica nel tuo team?", "Allora mandami pure un messaggio", "Farid Zouheir | Software Developer"];
 
         writingAnimation();
 
