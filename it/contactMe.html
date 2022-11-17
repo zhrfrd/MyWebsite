@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti</title>
+    <link rel="stylesheet" href="../stylesheets/pageStyle.css">
+    <script type="text/javascript" src="../scripts/dropdownMenu.js"></script> 
+</head>
+<body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main" class="skipLink">Vai al contenuto principale</a>
+    
+    <!-- HEADER -->
+    <header id="header">
+        <div id="headerContainerLeft">
+            <a href="index.html" class="headerItem"><img src="../images/faridLogo.png" alt="Farid logo"></a>
+            <div id="searchBar" class="headerItem">
+                <h1 id="searchBarText"></h1>
+                <div id="searchBarIconContainer"><img src="../images/searchIcon.png" alt="Magnifier icon" id="searchBarIcon"></div>
+            </div>
+        </div>
+        <div id="headerContainerRight">
+            <div class="menuBlock" role="button" tabindex="0" aria-pressed="false" aria-label="Dropdown menu for my social networks" onkeypress="openDropdown()" onclick="openDropdown()">
+                <img src="../images/gridIcon.png" class="menuIcon navItem" alt="My social network icon">
+                <div id="dropDownMenu" class="menuContainer">
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank"><img class="menuImage" src="../images/linkedinLogo.png" alt="Farid logo" style="height: 40px;"></a><p class="menuImageP">LinkedIn</p></div>
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://github.com/zhrfrd" target="blank"><img class="menuImage" src="../images/githubLogo.png" alt="Github logo" style="height: 40px;"></a><p class="menuImageP">GitHub</p></div>
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href=""><img class="menuImage" src="../images/outlookLogo.png" alt="Gmail logo" style="height: 40px;"></a><p class="menuImageP">Outlook</p></div>
+                </div>
+            </div>
+            <a href="contactMe.html" id="contactMeLink" class="headerItem"><div id="contactMeButton">Contatti</div></a>
+        </div>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav id="nav">
+        <a href="myEducation.html" class="navItem"  id="myEducation">Educazione</a>
+        <a href="myExperience.html" class="navItem" id="myExperience">Esperienze</a>
+        <a href="skills.html" class="navItem" id="skills">Abilità</a>
+        <a href="projects.html" class="navItem" id="projects">Progetti</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main id="main">
+        <aside id="contentInfo">
+            <!-- <div id="contentInfoImageContainer">
+                <img src="images/accessibilityLogo.png" id="contentInfoImage" alt="Logo of University of Greenwich" class="contentInfoImage">
+            </div> -->
+            <div id="contentInfoHeader">
+                <h3 id="contentInfoTitle" tabindex="-1">Contatti</h3>
+            </div>
+            <div id="contentInfoTextContainer">
+                <p>Indirizzo email: <a href="mailto:zouheirjob@hotmail.com">zouheirjob@hotmail.com</a></p>
+                <p>Telefono: <a href="tel:+4407463916916">+4407463916916</a> or <a href="tel:07463916916">07463916916</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank">Farid Zouheir</a></p>
+            </div>
+        </aside>
+    </main>
+
+    <!-- FOOTER -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to the "map-marker" icon" -->
+    <footer id="footer">
+        <div class="footerContent">
+            <span class="footerText"><i style="font-size:24px" class="fa">&#xf041;</i> Londra</span>
+        </div>
+        <div class="footerContent">
+            <span class="footerText">Farid Zouheir</span>
+        </div>
+        <div class="footerContent">
+            <span class="footerText"><a href="wip.html" target="blank" class="footerLink">Inglese</a></span>
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script>
+
+        changeNavActiveId();   //Change the id of the tab (inside the top navigation) relative the the actual page to "active" in order change the color through CSS
+
+        function changeNavActiveId() 
+        {
+            document.getElementById("searchBarText").textContent = "Contact me";
+        }
+    </script>
+</body>
+</html>
