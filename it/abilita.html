@@ -4,77 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-    <link rel="stylesheet" href="stylesheets/pageStyle.css">
+    <title>Abilità</title>
+    <link rel="stylesheet" href="../stylesheets/pageStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="scripts/dropdownMenu.js"></script> 
+    <script type="text/javascript" src="../scripts/dropdownMenu.js"></script> 
 </head>
 <body>
     <!-- SKIP LINK (Accessibility) -->
-    <a href="#main" class="skipLink">Skip to main content</a>
+    <a href="#main" class="skipLink">Vai al contenuto principale</a>
 
     <!-- HEADER -->
     <header id="header">
         <div id="headerContainerLeft">
-            <a href="index.html" class="headerItem"><img src="images/faridLogo.png" alt="Farid logo"></a>
+            <a href="index.html" class="headerItem"><img src="../images/faridLogo.png" alt="Logo Farid"></a>
             <div id="searchBar" class="headerItem">
                 <h1 id="searchBarText"></h1>
-                <div id="searchBarIconContainer"><img src="images/searchIcon.png" alt="Magnifier icon" id="searchBarIcon"></div>
+                <div id="searchBarIconContainer"><img src="../images/searchIcon.png" alt="Icon lente di ingrandimento" id="searchBarIcon"></div>
             </div>
         </div>
         <div id="headerContainerRight">
             <div class="menuBlock" role="button" tabindex="0" aria-pressed="false" aria-label="Dropdown menu for my social networks" onkeypress="openDropdown()" onclick="openDropdown()">
-                <img src="images/gridIcon.png" class="menuIcon navItem" alt="My social network icon">
+                <img src="../images/gridIcon.png" class="menuIcon navItem" alt="My social network icon">
                 <div id="dropDownMenu" class="menuContainer">
-                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank"><img class="menuImage" src="images/linkedinLogo.png" alt="Farid logo" style="height: 40px;"></a><p class="menuImageP">LinkedIn</p></div>
-                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://github.com/zhrfrd" target="blank"><img class="menuImage" src="images/githubLogo.png" alt="Github logo" style="height: 40px;"></a><p class="menuImageP">GitHub</p></div>
-                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="mailto:zouheirjob@hotmail.com"><img class="menuImage" src="images/outlookLogo.png" alt="Outlook logo" style="height: 40px;"></a><p class="menuImageP">Outlook</p></div>
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://www.linkedin.com/in/farid-zouheir-6bb329172/" target="blank"><img class="menuImage" src="../images/linkedinLogo.png" alt="Farid logo" style="height: 40px;"></a><p class="menuImageP">LinkedIn</p></div>
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="https://github.com/zhrfrd" target="blank"><img class="menuImage" src="../images/githubLogo.png" alt="Github logo" style="height: 40px;"></a><p class="menuImageP">GitHub</p></div>
+                    <div class="menuImageContainer" role="button" tabindex="-1" aria-pressed="false"><a href="mailto:zouheirjob@hotmail.com"><img class="menuImage" src="../images/outlookLogo.png" alt="Outlook logo" style="height: 40px;"></a><p class="menuImageP">Outlook</p></div>
                 </div>
             </div>
-            <a href="contactMe.html" id="contactMeLink" class="headerItem"><div id="contactMeButton">Contact me</div></a>
+            <a href="contatti.html" id="contactMeLink" class="headerItem"><div id="contactMeButton">Contatti</div></a>
         </div>
     </header>
 
     <!-- NAVIGATION BAR -->
     <nav id="nav">
-        <a href="myEducation.html" class="navItem"  id="myEducation">My Education</a>
-        <a href="myExperience.html" class="navItem" id="myExperience">Work Experiences</a>
-        <a href="skills.html" class="navItem" id="skills">Skills</a>
-        <a href="projects.html" class="navItem" id="projects">Projects</a>
+        <a href="myEducation.html" class="navItem"  id="myEducation">Educazione</a>
+        <a href="myExperience.html" class="navItem" id="myExperience">Esperienze</a>
+        <a href="skills.html" class="navItem" id="skills">Abilità</a>
+        <a href="projects.html" class="navItem" id="projects">Progetti</a>
     </nav>
 
     <!-- MAIN CONTENT -->
     <main id="main">
         <section id="contentList">
             <div class="contentItem">
-                <div tabindex="0" onclick="changeInfoContent('images/programmingLanguages.jpg','Programming Languages', 'List of programming languages that I can use', '1')" onkeypress="changeInfoContent('images/programmingLanguages.jpg','Programming Languages', 'List of programming languages that I can use', '1')"><h2 class="hTitle">Programming Languages</h2></div>
-                <p class="pDescription">This is a list of the programming languages that I can use.</p>
+                <div tabindex="0" onclick="changeInfoContent('../images/programmingLanguages.jpg','Linguaggi di programmazione', 'Lista dei linguaggi di programmazione che so usare', '1')" onkeypress="changeInfoContent('../images/programmingLanguages.jpg','Linguaggi di programmazione', 'Lista dei linguaggi di programmazione che so usare', '1')"><h2 class="hTitle">Linguaggi di programmazione</h2></div>
+                <p class="pDescription">Lista dei linguaggi di programmazione che so usare.</p>
             </div>
             <div class="contentItem">
-                <div tabindex="0" onclick="changeInfoContent('images/webDeveloper.png','Web Development', 'My Web Development skills', '2')" onkeypress="changeInfoContent('images/webDeveloper.png','Web Development', 'My Web Development skills', '2')"><h2 class="hTitle">Web Development</h2></div>
-                <p class="pDescription">Summary of my Web development skills.</p>
+                <div tabindex="0" onclick="changeInfoContent('../images/webDeveloper.png','Sviluppo web', 'Abilità nello sviluppo web', '2')" onkeypress="changeInfoContent('../images/webDeveloper.png','Sviluppo web', 'Abilità nello sviluppo web', '2')"><h2 class="hTitle">Sviluppo web</h2></div>
+                <p class="pDescription">Abilità nello sviluppo web.</p>
             </div>
             <div class="contentItem">
-                <div tabindex="0" onclick="changeInfoContent('images/database.png','Database', 'My Database skills', '3')" onkeypress="changeInfoContent('images/database.png','Database', 'My Database skills', '2')"><h2 class="hTitle">Database</h2></div>
-                <p class="pDescription">Summary of my prolificacy using databases.</p>
+                <div tabindex="0" onclick="changeInfoContent('../images/database.png','Database', 'Abilità nell` uso di database', '3')" onkeypress="changeInfoContent('../images/database.png','Database', 'Abilità nell` uso di database', '2')"><h2 class="hTitle">Database</h2></div>
+                <p class="pDescription">Abilità null'uso di database.</p>
             </div>
             <div class="contentItem">
-                <div tabindex="0" onclick="changeInfoContent('images/toolsAndFramework.png','Tools and Frameworks', 'List of Tools and Frameworks that I uses', '4')" onkeypress="changeInfoContent('images/toolsAndFramework.png','Tools and Frameworks', 'List of Tools and Frameworks that I uses', '2')"><h2 class="hTitle">Tools and Frameworks</h2></div>
-                <p class="pDescription">List of Tools and Frameworks that I use.</p>
+                <div tabindex="0" onclick="changeInfoContent('../images/toolsAndFramework.png','Tools e Frameworks', 'Lista di Tool e Frameworks che so usare', '4')" onkeypress="changeInfoContent('../images/toolsAndFramework.png','Tools and Frameworks', 'List of Tools and Frameworks that I uses', '2')"><h2 class="hTitle">Tools e framework</h2></div>
+                <p class="pDescription">Lista di Tool e Frameworks che so usare.</p>
             </div>
             <div class="contentItem">
-                <div tabindex="0" onclick="changeInfoContent('images/personalSkills.jpg','Soft Skills', 'List of my personal skills usefull for work', '5')" onkeypress="changeInfoContent('images/personalSkills.jpg','Personal Skills', 'List of personal skills usefull for work', '2')"><h2 class="hTitle">Soft Skills</h2></div>
-                <p class="pDescription">List of my personal skills that can be useful in a work environment.</p>
+                <div tabindex="0" onclick="changeInfoContent('../images/personalSkills.jpg','Abilità interpersonali', 'Lista delle mie abilità interpersonali utili all` interno di un ambiente lavorativo', '5')" onkeypress="changeInfoContent('../images/personalSkills.jpg','Abilità interpersonali', 'Lista delle mie abilità interpersonali utili all` interno di un ambiente lavorativo', '2')"><h2 class="hTitle">Abilità interpersonali</h2></div>
+                <p class="pDescription">Lista delle mie abilità interpersonali utili all' interno di un ambiente lavorativo.</p>
             </div>
         </section>
 
         <aside id="contentInfo">
             <div id="contentInfoImageContainer">
-                <img src="images/programmingLanguages.jpg" id="contentInfoImage" alt="Logo of HEIW" class="contentInfoImage">
+                <img src="../images/programmingLanguages.jpg" id="contentInfoImage" alt="Logo of HEIW" class="contentInfoImage">
             </div>
             <div id="contentInfoHeader">
-                <h3 id="contentInfoTitle" tabindex="-1">Programming Languages</h3>
-                <p id="contentInfoSubtitle">List of programming languages that I can use</p>
+                <h3 id="contentInfoTitle" tabindex="-1">Linguaggi di programmazione</h3>
+                <p id="contentInfoSubtitle">Lista dei linguaggi di programmazione che so usare.</p>
             </div>
             <div id="contentInfoTextContainer">
                 <p>
@@ -93,13 +93,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to the "map-marker" icon" -->
     <footer id="footer">
         <div class="footerContent">
-            <span class="footerText"><i style="font-size:24px" class="fa">&#xf041;</i> London</span>
+            <span class="footerText"><i style="font-size:24px" class="fa">&#xf041;</i> Londra</span>
         </div>
         <div class="footerContent">
             <span class="footerText">Farid Zouheir</span>
         </div>
         <div class="footerContent">
-            <span class="footerText"><a href="it/abilita.html" target="blank" class="footerLink">Italian</a></span>
+            <span class="footerText"><a href="../skills.html" target="blank" class="footerLink">English</a></span>
         </div>
     </footer>
 
@@ -111,7 +111,7 @@
         function changeNavActiveId() 
         {
             document.getElementById("skills").id = "active";
-            document.getElementById("searchBarText").textContent = "Skills";
+            document.getElementById("searchBarText").textContent = "Abilità";
         }
 
         function changeInfoContent(infoImage, infoTitle, infoSubtitle, infoSection)
@@ -125,27 +125,27 @@
             switch (infoSection)
             {
                 case "1":
-                    document.getElementById("contentInfoImage").alt = "Icon programming languages";
+                    document.getElementById("contentInfoImage").alt = "Icona linguaggi di programmazione";
                     document.getElementById("contentInfoTextContainer").innerHTML = '<p<p><ul><li class="skillsList">Java&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o checked"></span></li><li class="skillsList">Javascript&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span><span class="fa fa-star-o checked"></span></li><li class="skillsList">PHP&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o checked"></span><span class="fa fa-star-o checked"></span></li><li class="skillsList">C#&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span><span class="fa fa-star-o checked"></span><span class="fa fa-star-o checked"></span></li></u></p>';
                     break;
 
                 case "2":
-                    document.getElementById("contentInfoImage").alt = "Icon web development";
+                    document.getElementById("contentInfoImage").alt = "Icona sviluppo web";
                     document.getElementById("contentInfoTextContainer").innerHTML = '<p><ul><li class="skillsList">HTML5&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span></li><li class="skillsList">Javascript&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span><span class="fa fa-star-o checked"></span></li><li class="skillsList">JQuery&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o checked"></span><span class="fa fa-star-o checked"></span></li><li class="skillsList">CSS3&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o checked"></span><span class="fa fa-star-o checked"></span></li><li class="skillsList">PHP&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o checked"></span><span class="fa fa-star-o checked"></span></li></ul></p>';
                     break;
 
                 case "3":
-                    document.getElementById("contentInfoImage").alt = "Icon database";
+                    document.getElementById("contentInfoImage").alt = "Icona database";
                     document.getElementById("contentInfoTextContainer").innerHTML = '<p><ul> <li class="skillsList">MySQL&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span><span class="fa fa-star-o checked"></span></li> <li class="skillsList">SQL&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span><span class="fa fa-star-o checked"></span></li> <li class="skillsList">MS Access&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span><span class="fa fa-star-o checked"></span></li> </ul></p>';
                     break;
 
                 case "4":
-                    document.getElementById("contentInfoImage").alt = "Icon tools and frameworks";
+                    document.getElementById("contentInfoImage").alt = "Icona tools e frameworks";
                     document.getElementById("contentInfoTextContainer").innerHTML = '<p><ul><li class="skillsList">Git (GitHub & GitLab)&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span></li><li class="skillsList">Bootstrap&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o checked"></li><li class="skillsList"></span>Laravel&nbsp;<span class="fa fa-star checked"></span><spanclass="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><spanclass="fa fa-star-half-o checked"></span><span class="fa fa-star-o checked"></span><span class="fa fa-star-o checked"></span></li><li class="skillsList">Silverstripe&nbsp;<span class="fa fa-star checked"></span><spanclass="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><spanclass="fa fa-star-half-o checked"></span><span class="fa fa-star-o checked"></span><span class="fa fa-star-o checked"></span></li><li class="skillsList">MS Access&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o checked"></span><span class="fa fa-star-o checked"></span></li><li class="skillsList">Asp.NET&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span><span class="fa fa-star-o checked"></span><span class="fa fa-star-o checked"></span></li></ul></p>';
                     break;
 
                 case "5":
-                    document.getElementById("contentInfoImage").alt = "Icon soft skills";
+                    document.getElementById("contentInfoImage").alt = "Icona abilità interpersonali";
                     document.getElementById("contentInfoTextContainer").innerHTML = '<p><ul> <li class="skillsList">Communication&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span></li> <li class="skillsList">Teamworking&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span></li> <li class="skillsList">Problem-solving&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span></li> <li class="skillsList">Dynamicity&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span></li> <li class="skillsList">Motivation&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-half-o checked"></span></li> <li class="skillsList">Logical thinking&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o checked"></span></li> <li class="skillsList">Accuracy&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o checked"></span></li> <li class="skillsList">Organization & time-management&nbsp;<span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star-o checked"></span></li> </ul></p>';
                     break;
 
