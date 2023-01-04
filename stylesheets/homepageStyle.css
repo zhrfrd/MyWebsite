@@ -134,7 +134,8 @@ main
 
 #searchBar
 {
-    min-height: 31px;
+    border-radius: 25px;
+    min-height: 40px;
     min-width: 300px;
     width: 30%;
     border: 1px solid #166DDF;
@@ -143,7 +144,8 @@ main
 #pTextPresentation
 {
     font-size: 16px;
-    margin: 6px;
+    margin: 10px;
+    margin-left: 16px;
 }
 
 .buttonsContainer

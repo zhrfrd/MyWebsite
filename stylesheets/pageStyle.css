@@ -59,6 +59,7 @@ body
 
 #searchBar
 {
+    border-radius: 25px;
     background-color: #FFF;
     min-height: 31px;
     width: 60%;
@@ -74,14 +75,17 @@ body
 {
     font-size: 16px;
     font-weight: normal;
-    margin: 6px;
+    margin: 10px;
+    margin-left: 16px;
 }
 
 #searchBarIconContainer
 {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
     background-color: #166DDF;
-    width: 31px;
-    height: 31px;
+    width: 46px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
