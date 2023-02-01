@@ -197,11 +197,15 @@ footer
 .footerContent
 {
     margin: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .footerText
 {
-    margin: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .footerLink
