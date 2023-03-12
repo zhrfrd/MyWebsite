@@ -1,2 +1,2 @@
 # My personal site
-This is my [personal site](https://zhrfrd.github.io/faridzouheir/). Have a look...
+This is my [personal site](https://zhrfrd.github.io/faridzouheir/), written in HTML, CSS and Javascript.
