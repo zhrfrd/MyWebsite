@@ -46,12 +46,17 @@
     <main id="main">
         <section id="contentList">
             <div class="contentItem">
-                <div tabindex="0" onclick="changeInfoContent('images/HEIWLogo.jpg','Software Developer', 'Health Education and Improvement Wales (HEIW)', '1')" onkeypress="changeInfoContent('images/HEIWLogo.jpg','Software Developer', 'Health Education and Improvement Wales (HEIW)', '1')"><h2 class="hTitle">Software Developer - Health Education and Improvement Wales (HEIW)</h2></div>
-                <a href="https://heiw.nhs.wales/" class="aUrl" target="blank" aria-label="Link to HEIW website">https://heiw.nhs.wales/</a>
-                <p class="pDescription">2021 till now - I joined HEIW in January 2021 with the role of <strong>Software Developer</strong>.</p>
+                <div tabindex="0" onclick="changeInfoContent('images/travelfusionLogo.png','Full-Stack Software Developer', 'Travelfusion (Task-Force team)', '1')" onkeypress="changeInfoContent('images/travelfusionLogo.jpg','Full-Stack Software Developer', ' (Task-Force team)', '1')"><h2 class="hTitle">Full-Stack Software Developer - Travelfusion</h2></div>
+                <a href="https://corporate.travelfusion.com/" class="aUrl" target="blank" aria-label="Link to Travelfusion website">https://corporate.travelfusion.com/</a>
+                <p class="pDescription">2023 till now - I joined the <strong>task-force</strong> team at Travelfusion in May 2023 with the role of <strong>Full-Stack Software Developer</strong>.</p>
             </div>
             <div class="contentItem">
-                <div tabindex="0" onclick="changeInfoContent('images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '2')" onkeypress="changeInfoContent('images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '2')"><h2 class="hTitle">Teacher Assistant (Computing) - Southwark College</h2></div>
+                <div tabindex="0" onclick="changeInfoContent('images/HEIWLogo.jpg','Software Developer', 'Health Education and Improvement Wales (HEIW)', '2')" onkeypress="changeInfoContent('images/HEIWLogo.jpg','Software Developer', 'Health Education and Improvement Wales (HEIW)', '2')"><h2 class="hTitle">Software Developer - Health Education and Improvement Wales (HEIW)</h2></div>
+                <a href="https://heiw.nhs.wales/" class="aUrl" target="blank" aria-label="Link to HEIW website">https://heiw.nhs.wales/</a>
+                <p class="pDescription">2021 to 2023 - I joined HEIW in January 2021 with the role of <strong>Software Developer</strong>.</p>
+            </div>
+            <div class="contentItem">
+                <div tabindex="0" onclick="changeInfoContent('images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '3')" onkeypress="changeInfoContent('images/southwarkLogo.png','Teacher Assistant (Computing)', 'Southwark College', '3')"><h2 class="hTitle">Teacher Assistant (Computing) - Southwark College</h2></div>
                 <a href="https://www.southwark.ac.uk/" class="aUrl" target="blank" aria-label="Link to Southwark College website">https://www.southwark.ac.uk/</a>
                 <p class="pDescription">2019 to 2020 - During my final year at <em>University of Greenwich</em> I've been assigned the position of <strong>Teacher Assistant</strong> for the <strong>Computing</strong> course.</p>
             </div>
@@ -59,19 +64,16 @@
 
         <aside id="contentInfo">
             <div id="contentInfoImageContainer">
-                <img src="images/HEIWLogo.jpg" id="contentInfoImage" alt="Logo of HEIW" class="contentInfoImage">
+                <img src="images/travelfusionLogo.png" id="contentInfoImage" alt="Logo of Travelfusion" class="contentInfoImage">
             </div>
             <div id="contentInfoHeader">
-                <h3 id="contentInfoTitle" tabindex="-1">Software Developer</h3>
-                <p id="contentInfoSubtitle">Health Education and Improvement Wales (HEIW)</p>
+                <h3 id="contentInfoTitle" tabindex="-1">Full-Stack Software Developer</h3>
+                <p id="contentInfoSubtitle">Travelfusion (Task-Force team)</p>
             </div>
             <div id="contentInfoTextContainer">
-                <p>In January 2021 I started working for <em>Health Education and Improvement Wales (HEIW)</em> as a <strong>Software Developer</strong>.</p>
-                <p>During my permanence at HEIW, I had the opportunity to contribute both on the front-end and back-end side of many applications used on national scale for the support of the NHS Wales and people such as <a href="https://orbit360.heiw.wales/login" target="blank">Orbit 360</a>, <a href="https://desap.heiw.wales/" target="blank">Desap</a>, <a href="https://medical.marswales.org/" target="blank">MARS</a> and <a href="https://meet.heiw.wales/" target="blank">MEET Tool</a>.</p>
-                <p>The main technologies I've used are <b>PHP</b>, using the back-end frameworks <b>Laravel</b> and <b>Livewire</b>, and <b>Alpine.js</b> together with <b>TailwindCSS</b>, for the front-end side.</p>
-                <p>My responsibility was also to refactor pre-existing systems in order to make them accessible following the WCAG standards.</p>
-                <p>I also designed and developed the <a href="https://accessibility.heiw.wales/" target="blank">accessibility guide for the company</a>....</p>
-                <p>You can find more details about the projects that I have built and contributed to in the <a href="https://zhrfrd.github.io/faridzouheir/projects.html" target="blank">Projects section</a>.</p>
+                <p>In May 2023 I joined the <em>Travelfusion</em> as a <strong>Full-Stack Software Developer</strong>.</p>
+                <p>During this period I have worked on improving the speed of our flights search engine which powers some of the major OTAs and search aggregators such as Booking.com, Expedia, eDreams, Skyscanner, and Google.</p>
+                <p>As a member of the <strong>taskforce</strong> team my main roles were to maintain stability and support of the 3 most important airlines for the company by applying effective web scraping techniques using <strong>Java</strong> and <strong>Node.js</strong>.</p>
             </div>
         </aside>
     </main>
@@ -112,11 +114,16 @@
             switch (infoSection)
             {
                 case "1":
+                    document.getElementById("contentInfoImage").alt = "Logo of Travelfusion";
+                    document.getElementById("contentInfoTextContainer").innerHTML = '<p>In May 2023 I joined the <em>Travelfusion</em> as a <strong>Full-Stack Software Developer</strong>.</p><p>During this period I have worked on improving the speed of our flights search engine which powers some of the major OTAs and search aggregators such as Booking.com, Expedia, eDreams, Skyscanner, and Google.</p><p>As a member of the <strong>task-force</strong> team my main roles were to maintain stability and support of the 3 most important airlines for the company by applying effective web scraping techniques using <strong>Java</strong> and <strong>Node.js</strong></p>';
+                    break;
+
+                case "2":
                     document.getElementById("contentInfoImage").alt = "Logo of HEIW";
                     document.getElementById("contentInfoTextContainer").innerHTML = '<p>In January 2021 I started working for <em>Health Education and Improvement Wales (HEIW)</em> as a <strong>Software Developer</strong>.</p><p>During my permanence at HEIW, I had the opportunity to contribute both on the front-end and back-end side of many applications used on national scale for the support of the NHS Wales and people such as <a href="https://orbit360.heiw.wales/login" target="blank">Orbit 360</a>, <a href="https://desap.heiw.wales/" target="blank">Desap</a>, <a href="https://medical.marswales.org/" target="blank">MARS</a> and <a href="https://meet.heiw.wales/" target="blank">MEET Tool</a>.</p><p>The main technologies I`ve used are <b>PHP</b>, using the back-end frameworks <b>Laravel</b> and <b>Livewire</b>, and <b>Alpine.js</b> together with <b>TailwindCSS</b>, for the front-end side.</p><p>My responsibility was also to refactor pre-existing systems in order to make them accessible following the WCAG standards.</p><p>I also designed and developed the <a href="https://accessibility.heiw.wales/" target="blank">accessibility guide for the company</a>....</p><p>You can find more details about the projects that I have built and contributed to in the <a href="https://zhrfrd.github.io/faridzouheir/projects.html" target="blank">Projects section</a>.</p>';
                     break;
 
-                case "2":
+                case "3":
                     document.getElementById("contentInfoImage").alt = "Logo of Southwark College";
                     document.getElementById("contentInfoTextContainer").innerHTML = '<p>During the last year of unversity I found a position as <strong>Teacher Assistant</strong> for the <strong>Computing</strong> course. My main duties were delivering lectures for the students of the Foundation year, focusing on the creation of web and desktop applications for them to understand the basics of front-end and back-end development.</p>';
                     break;
